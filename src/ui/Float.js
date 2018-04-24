@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, View, StyleSheet} from 'react-native';
+import { Animated, View, StyleSheet, Image} from 'react-native';
 
 export default class Float extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class Float extends React.Component {
   componentWillReceiveProps(nextProps) {
     let icons = this.state.icons;
     for (let i = this.props.count; i < nextProps.count; i++) {
-      icons.push(<FloatIcon key={i} floatStart={(Math.random() * 100) - 50}/>);
+      icons.push(<FloatIcon key={i} floatStart={(Math.random() * 100) - 50} icon={this.props.icon} />);
     }
     this.setState({icons});
   }
@@ -75,10 +75,10 @@ class FloatIcon extends React.Component {
         position: 'absolute',
         left: -floatStart,
         top: float,
-        backgroundColor: 'red',
         opacity: fadeOut
       }}
       pointerEvents={'none'}>
+      <Image source={this.props.icon}/>
       </Animated.View>
     );
   }

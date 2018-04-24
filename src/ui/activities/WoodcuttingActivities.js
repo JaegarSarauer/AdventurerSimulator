@@ -3,6 +3,7 @@ import { Button, View, Text, StyleSheet, FlatList} from 'react-native';
 import {Player, PP} from '../../state/Player'; 
 import { ITEM } from '../../def/Item';
 import { SKILL } from '../../def/Skill';
+import * as IMAGE from '../../def/Image';
 import Activity from './../Activity';
 import Float from '../Float';
 
@@ -32,8 +33,8 @@ export default class WoodcuttingActivities extends React.Component {
             reward={{item: ITEM.Logs, amount: 1, xp: 5}}
             onFloat={(type, count) => this.addFloat('tree', type, count)}
           />
-          <Float count={this.state.floattreeloot}/>
-          <Float count={this.state.floattreeprogress}/>
+          <Float count={this.state.floattreeloot} icon={IMAGE.ITEMS.Logs}/>
+          <Float count={this.state.floattreeprogress} icon={IMAGE.ICONS.Smash}/>
           </View>
         }
         {PP.hasLevel(SKILL.Woodcutting, 15) && 

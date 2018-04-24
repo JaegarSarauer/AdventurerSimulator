@@ -1,13 +1,15 @@
-#Adventurer Simulator
-###### An incremental & idle mobile game developed for Android.
+# Adventurer Simulator
+#### An incremental & idle mobile game developed for Android.
 
 This project is written using the react-native framework.
 
-### Running
+## Running
 
 To run on Android:
 ---
 You'll need an Adnroid emulator running, or a device in developer mode connected to your computer.
+
+Change the sdk.dir location to your SDK location found in `./android/local.properties`
 
 ```
 npm install

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, FlatList, Modal} from 'react-native';
 import {Player, PP} from '../state/Player'; 
-import { ITEM } from '../definitions/Item';
+import { ITEM } from '../def/Item';
 
 export default class Shop extends React.Component {
   constructor(props) {

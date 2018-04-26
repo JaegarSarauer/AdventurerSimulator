@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Modal, Image} from 'react-native';
-import {Player, PP} from '../state/Player'; 
+import {USER, User} from '../state/User'; 
 import { ITEM } from '../def/Item';
 
 export default class Shop extends React.Component {
@@ -13,20 +13,20 @@ export default class Shop extends React.Component {
   }
 
   sellItem(item, amount) {
-    amount = Math.min(amount, PP.getItemAmount(item));
+    amount = Math.min(amount, USER.players[USER.viewingPlayer].getItemAmount(item));
     if (amount === 0) {
       this.setState({showSellModal: false});
       return;
     }
-    PP.removeItem(item, amount);
-    PP.addItem(ITEM.Coins, amount * item.value);
+    USER.players[USER.viewingPlayer].removeItem(item, amount);
+    USER.players[USER.viewingPlayer].addItem(ITEM.Coins, amount * item.value);
     this.setState({
       showSellModal: false,
     });
   }
 
   render() {
-    const items = PP.items.filter(item => {return item.id !== ITEM.Coins.id});
+    const items = USER.players[USER.viewingPlayer].items.filter(item => {return item.id !== ITEM.Coins.id});
     if (items.length === 0)
       return (<Text style={styles.centerText}>No items to sell!</Text>);
     return (
@@ -47,17 +47,17 @@ export default class Shop extends React.Component {
           visible={this.state.showSellModal}
           onRequestClose={() => {this.setState({showSellModal: false})}}
         >
-        <View style={modal.buttons3}>
-          <View style={modal.buttonContainer}>
-            <Button style={modal.button} title='Sell 1' onPress={() => {this.sellItem(this.state.modalItem, 1)}}/>
-        </View>
-          <View style={modal.buttonContainer}>
-            <Button style={modal.button} title='Sell 10' onPress={() => {this.sellItem(this.state.modalItem, 10)}}/>
-        </View>
-          <View style={modal.buttonContainer}>
-            <Button style={modal.button} title='Sell All' onPress={() => {this.sellItem(this.state.modalItem, this.state.modalItem.amount)}}/>
-        </View>
-        </View>
+            <View style={modal.buttons3}>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Sell 1' onPress={() => {this.sellItem(this.state.modalItem, 1)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Sell 10' onPress={() => {this.sellItem(this.state.modalItem, 10)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Sell All' onPress={() => {this.sellItem(this.state.modalItem, this.state.modalItem.amount)}}/>
+                </View>
+            </View>
         </Modal>
       </View>
     );

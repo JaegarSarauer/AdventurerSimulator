@@ -1,14 +1,19 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Image} from 'react-native';
-import {User, USER} from '../state/User'; 
+import {USER, User} from '../state/User'; 
 
-export default class Inventory extends React.Component {
+export default class Bank extends React.Component {
   render() {
-    if (USER.players[USER.viewingPlayer].items.length === 0)
-      return (<Text style={styles.centerText}>You have no items!</Text>);
+    if (USER.bank.length === 0)
+      return (
+        <View>
+          <Text style={styles.centerText}>You have no items!</Text>
+          <Text style={styles.centerText}>Tell some adventurers to go to the bank.</Text>
+        </View>
+      );
     return (
       <View style={styles.container}>
-        {USER.players[USER.viewingPlayer].items.map(item =>
+        {USER.bank.map(item =>
           <View key={item.id} style={styles.item}>
             <Image source={item.icon}/>
             <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
@@ -38,6 +43,12 @@ const styles = StyleSheet.create({
   text: {
       paddingLeft: 10,
     fontSize: 18,
+  },
+  center: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   centerText: {
       width: '100%',

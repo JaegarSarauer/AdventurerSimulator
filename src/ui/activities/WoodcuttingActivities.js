@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, FlatList} from 'react-native';
-import {Player, PP} from '../../state/Player'; 
+import {USER, User} from '../../state/User'; 
 import { ITEM } from '../../def/Item';
 import { SKILL } from '../../def/Skill';
 import * as IMAGE from '../../def/Image';
@@ -25,7 +25,7 @@ export default class WoodcuttingActivities extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {PP.hasLevel(SKILL.Woodcutting, 1) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 1) && 
           <View style={styles.activity}>
           <Activity 
             title='Tree'
@@ -37,7 +37,7 @@ export default class WoodcuttingActivities extends React.Component {
           <Float count={this.state.floattreeprogress} icon={IMAGE.ICONS.Smash}/>
           </View>
         }
-        {PP.hasLevel(SKILL.Woodcutting, 15) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 15) && 
           <View style={styles.activity}>
           <Activity 
             title='Oak Tree'
@@ -46,7 +46,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {PP.hasLevel(SKILL.Woodcutting, 30) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 30) && 
           <View style={styles.activity}>
           <Activity 
             title='Willow Tree'
@@ -55,7 +55,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {PP.hasLevel(SKILL.Woodcutting, 45) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 45) && 
           <View style={styles.activity}>
           <Activity 
             title='Maple Tree'
@@ -64,7 +64,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {PP.hasLevel(SKILL.Woodcutting, 60) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 60) && 
           <View style={styles.activity}>
           <Activity 
             title='Yew Tree'
@@ -73,7 +73,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {PP.hasLevel(SKILL.Woodcutting, 80) && 
+        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 80) && 
           <View style={styles.activity}>
           <Activity 
             title='Arbutus Tree'

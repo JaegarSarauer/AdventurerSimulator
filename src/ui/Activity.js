@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
-import {Player, PP} from '../state/Player'; 
+import {User, USER} from '../state/User'; 
 import { ITEM } from '../def/Item';
 import { SKILL } from '../def/Skill';
 import Float from './Float';
@@ -19,15 +19,15 @@ export default class Activity extends React.Component {
     }
 
     getProgressIncrement() {
-      this.setState({progressIncrement: .75 + PP.skills[SKILL.Woodcutting.id].level * .25});
+      this.setState({progressIncrement: .75 + USER.players[USER.viewingPlayer].skills[SKILL.Woodcutting.id].level * .25});
     }
 
     action() {
         let progress = this.state.progress + this.state.progressIncrement;
         if (progress >= this.props.maxProgress) {
             progress -= this.props.maxProgress;
-            PP.addItem(this.props.reward.item, this.props.reward.itemAmount);
-            PP.addXP(SKILL.Woodcutting, this.props.reward.xp);
+            USER.players[USER.viewingPlayer].addItem(this.props.reward.item, this.props.reward.itemAmount);
+            USER.players[USER.viewingPlayer].addXP(SKILL.Woodcutting, this.props.reward.xp);
             this.getProgressIncrement();
             this.props.onFloat('loot', 1);
         }

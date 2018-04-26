@@ -32,8 +32,8 @@ build-unsigned.sh
 ```
 from terminal, to build an .apk.
 
-Unsigned builds can be made from windows by following the same commands except using:
+Unsigned builds can be made from windows by running
 ```
-gradlew assembleRelease
+build-unsigned.cmd
 ```
-in the android directory.
+from the command line.

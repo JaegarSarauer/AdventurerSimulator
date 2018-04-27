@@ -25,40 +25,23 @@ export default class Shop extends React.Component {
     });
   }
 
+  showBuyItems() {
+    this.props.navigation.navigate('ShopBuy', { title: 'Buy Items' })
+  }
+
+  showSellItems() {
+    this.props.navigation.navigate('ShopSell', { title: 'Sell Items' })
+  }
+
   render() {
-    const items = USER.players[USER.viewingPlayer].items.filter(item => {return item.id !== ITEM.Coins.id});
-    if (items.length === 0)
-      return (<Text style={styles.centerText}>No items to sell!</Text>);
     return (
       <View style={styles.container}>
-        {items.map(item =>
-          <View 
-            onTouchEnd={() => {this.setState({showSellModal: true, modalItem: item})}} 
-            key={item.id} 
-            style={styles.item}
-          >
-            <Image source={item.icon}/>
-            <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
-          </View>
-        )}
-        <Modal
-          animationType='slide'
-          transparent={false}
-          visible={this.state.showSellModal}
-          onRequestClose={() => {this.setState({showSellModal: false})}}
-        >
-            <View style={modal.buttons3}>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Sell 1' onPress={() => {this.sellItem(this.state.modalItem, 1)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Sell 10' onPress={() => {this.sellItem(this.state.modalItem, 10)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Sell All' onPress={() => {this.sellItem(this.state.modalItem, this.state.modalItem.amount)}}/>
-                </View>
-            </View>
-        </Modal>
+        <View style={modal.buttonContainer}>
+            <Button style={modal.button} title='Buy Items' onPress={() => {this.showBuyItems()}}/>
+        </View>
+        <View style={modal.buttonContainer}>
+            <Button style={modal.button} title='Sell Items' onPress={() => {this.showSellItems()}}/>
+        </View>
       </View>
     );
   }

@@ -42,5 +42,23 @@ export const ITEM = {
         name: 'Arbutus Logs',
         value: 30,
         icon: IMAGE.ITEMS.Logs,
-    }
+    },
+    BronzeAxe: {
+        id: 7,
+        name: 'Bronze Axe',
+        value: 20,
+        icon: IMAGE.ITEMS.Logs,
+    },
+    IronAxe: {
+        id: 8,
+        name: 'Iron Axe',
+        value: 40,
+        icon: IMAGE.ITEMS.Logs,
+    },
+    SteelAxe: {
+        id: 9,
+        name: 'Steel Axe',
+        value: 200,
+        icon: IMAGE.ITEMS.Logs,
+    },
 };

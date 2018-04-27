@@ -3,6 +3,7 @@ import {USER, User} from './User';
 import { AsyncStorage } from 'react-native';
 import { ITEM } from '../def/Item';
 import { SKILL } from '../def/Skill';
+import * as Activities from '../def/Activity';
 
 const STORES = {
     Items: '@PlayerItems',
@@ -15,6 +16,8 @@ const XP_TABLE = [0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 18
 export class Player {
     constructor(name) {
         this.name = name;
+        //current action that this player is doing. some loop.
+        this.activity = Activities.IDLE.action(Activities.IDLE.IDLE);
         this.items = [];
         this.skills = [{
             name: 'Woodcutting',
@@ -23,12 +26,31 @@ export class Player {
         }];
     }
 
+    /*
+    Call action first and pass the return into this.
+    */
+    setActivity(activityResult) {
+        if (this.activity != null && this.activity.timer != null)
+            clearInterval(this.activity.timer);
+        if (this.activity != null && this.activity.timeout != null)
+            clearTimeout(this.activity.timeout);
+        this.activity = activityResult;
+    }
+
+    stopActivity() {
+        if (this.activity != null && this.activity.timer != null)
+            clearInterval(this.activity.timer);
+        if (this.activity != null && this.activity.timeout != null)
+            clearTimeout(this.activity.timeout);
+    }
+
     packSaveDataJSON() {
         //pack
         let allData = {
             items: this.items,
             bank: this.bank,
             skills: this.skills,
+            activity: this.activity,
             name: this.name,
         };
         //stringify
@@ -41,6 +63,7 @@ export class Player {
         this.bank = results.bank;
         this.skills = results.skills;
         this.name = results.name;
+        this.activity = results.activity;
         //update definitions here maybe?
     }
 

@@ -6,7 +6,8 @@ import React from 'react';
 import { AsyncStorage } from 'react-native';
 import { ITEM } from '../def/Item';
 import { SKILL } from '../def/Skill';
-import {Player } from './Player';
+import { Player } from './Player';
+import * as Activities from '../def/Activity';
 
 export class User {
     constructor() {
@@ -22,7 +23,9 @@ export class User {
         //The id of the player were looking through in the UI.
         this.viewingPlayer = -1;
 
-        this.loadData();
+        this.addBankItem(ITEM.BronzeAxe, 1);
+
+        //this.loadData();
         this.autosaveLoop = setInterval(() => {
             this.saveData();
         }, 30000);

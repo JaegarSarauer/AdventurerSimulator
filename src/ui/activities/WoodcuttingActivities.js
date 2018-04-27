@@ -6,6 +6,7 @@ import { SKILL } from '../../def/Skill';
 import * as IMAGE from '../../def/Image';
 import Activity from './../Activity';
 import Float from '../Float';
+import * as Activities from '../../def/Activity';
 
 export default class WoodcuttingActivities extends React.Component {
   constructor(props) {
@@ -29,20 +30,19 @@ export default class WoodcuttingActivities extends React.Component {
           <View style={styles.activity}>
           <Activity 
             title='Tree'
-            maxProgress={8}
-            reward={{item: ITEM.Logs, amount: 1, xp: 5}}
-            onFloat={(type, count) => this.addFloat('tree', type, count)}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.TREE, USER.viewingPlayer));
+            }}
           />
-          <Float count={this.state.floattreeloot} icon={IMAGE.ITEMS.Logs}/>
-          <Float count={this.state.floattreeprogress} icon={IMAGE.ICONS.Smash}/>
           </View>
         }
         {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 15) && 
           <View style={styles.activity}>
           <Activity 
             title='Oak Tree'
-            maxProgress={32}
-            reward={{item: ITEM.OakLogs, amount: 1, xp: 15}}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.OAKTREE, USER.viewingPlayer));
+            }}
           />
           </View>
         }
@@ -50,8 +50,9 @@ export default class WoodcuttingActivities extends React.Component {
           <View style={styles.activity}>
           <Activity 
             title='Willow Tree'
-            maxProgress={128}
-            reward={{item: ITEM.WillowLogs, amount: 1, xp: 30}}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.WILLOWTREE, USER.viewingPlayer));
+            }}
           />
           </View>
         }
@@ -59,8 +60,9 @@ export default class WoodcuttingActivities extends React.Component {
           <View style={styles.activity}>
           <Activity 
             title='Maple Tree'
-            maxProgress={512}
-            reward={{item: ITEM.MapleLogs, amount: 1, xp: 55}}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.MAPLETREE, USER.viewingPlayer));
+            }}
           />
           </View>
         }
@@ -68,8 +70,9 @@ export default class WoodcuttingActivities extends React.Component {
           <View style={styles.activity}>
           <Activity 
             title='Yew Tree'
-            maxProgress={2048}
-            reward={{item: ITEM.YewLogs, amount: 1, xp: 80}}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.YEWTREE, USER.viewingPlayer));
+            }}
           />
           </View>
         }
@@ -77,8 +80,9 @@ export default class WoodcuttingActivities extends React.Component {
           <View style={styles.activity}>
           <Activity 
             title='Arbutus Tree'
-            maxProgress={10240}
-            reward={{item: ITEM.ArbutusLogs, amount: 1, xp: 120}}
+            onPress={() => {
+              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.ARBUTUSTREE, USER.viewingPlayer));
+            }}
           />
           </View>
         }

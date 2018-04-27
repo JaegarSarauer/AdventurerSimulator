@@ -3,6 +3,8 @@ import { ITEM } from '../def/Item';
 import { SKILL } from '../def/Skill';
 import { ToastAndroid} from 'react-native';
 
+export const TICK_TIME = 250;
+
 export class GameState {
     constructor() {
         this.playerCost = 100;

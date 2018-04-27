@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet} from 'react-native';
+import PlayerHeader from './PlayerHeader';
 
 export default class Player extends React.Component {
 
@@ -22,6 +23,7 @@ export default class Player extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <PlayerHeader/>
         <View style={styles.buttonContainer}>
           <Button style={styles.button} title='Inventory' onPress={() => this.showInventory()}/>
         </View>
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: 'green',
   },
   buttonContainer: {

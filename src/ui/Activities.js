@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList} from 'react-native';
 import Button from './Button';
-import {Player, PP} from '../state/Player'; 
 import { ITEM } from '../def/Item';
 import Activity from './Activity';
 

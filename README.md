@@ -23,3 +23,17 @@ iOS is also supported by react-native, but will not be tested as development con
 npm install
 react-native run-ios
 ```
+
+## Building (Unsigned)
+
+If you want to skip the dev setup, you can run
+```
+build-unsigned.sh
+```
+from terminal, to build an .apk.
+
+Unsigned builds can be made from windows by running
+```
+build-unsigned.cmd
+```
+from the command line.

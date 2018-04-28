@@ -1,22 +1,37 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, FlatList} from 'react-native';
-import {Player, PP} from '../state/Player'; 
+import {User, USER} from '../state/User'; 
 
 export default class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      skills: [],
+    };
+    this.skillsToken = null;
+  }
+
+  componentWillMount() {
+    this.skillsToken = USER.getCurrentPlayer().skills.watch((skills) => {
+      this.setState({skills});
+    })
+  }
+
+  componentWillUnmount() {
+    this.skillsToken.stop();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <FlatList
-          data={PP.skills}
-          keyExtractor={(item, index) => item.name}
-          renderItem={({item}) => 
+        {this.state.skills.map(skill => 
           <Text 
+            key={skill.name}
             style={styles.item}
           >
-            {item.name + ": " + item.level + ' (' + item.xp + 'xp)'}
+            {skill.name + ": " + skill.level + ' (' + skill.xp + 'xp)'}
           </Text>
-        }
-        />
+        )}
       </View>
     );
   }

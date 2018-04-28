@@ -14,11 +14,10 @@ export default class PlayerHeader extends React.Component {
   }
 
   componentWillMount() {
-    USER.getCurrentPlayer().name.watch((name) => {
+    this.nameToken = USER.getCurrentPlayer().name.watch((name) => {
       this.setState({name});
     });
-    USER.getCurrentPlayer().activity.watch((activity) => {
-      console.info(activity)
+    this.activityToken = USER.getCurrentPlayer().activity.watch((activity) => {
       this.setState({activity});
     });
   }

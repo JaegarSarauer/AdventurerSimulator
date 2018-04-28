@@ -3,8 +3,26 @@ import { Button, View, Text, StyleSheet, Image} from 'react-native';
 import {USER, User} from '../state/User'; 
 
 export default class Bank extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bank: [],
+    };
+    this.bankToken = null;
+  }
+
+  componentWillMount() {
+    this.bankToken = USER.bank.watch((bank) => {
+      this.setState({bank});
+    })
+  }
+
+  componentWillUnmount() {
+    this.bankToken.stop();
+  }
+
   render() {
-    if (USER.bank.length === 0)
+    if (this.state.bank.length === 0)
       return (
         <View>
           <Text style={styles.centerText}>You have no items!</Text>
@@ -13,7 +31,7 @@ export default class Bank extends React.Component {
       );
     return (
       <View style={styles.container}>
-        {USER.bank.map(item =>
+        {this.state.bank.map(item =>
           <View key={item.id} style={styles.item}>
             <Image source={item.icon}/>
             <Text style={styles.text}>{item.name + ": " + item.amount}</Text>

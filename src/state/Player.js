@@ -39,10 +39,7 @@ export class Player {
     }
 
     stopActivity() {
-        if (this.activity.value != null && this.activity.value.timer != null)
-            clearInterval(this.activity.value.timer);
-        if (this.activity.value != null && this.activity.value.timeout != null)
-            clearTimeout(this.activity.value.timeout);
+        this.setActivity(Activities.IDLE.action(Activities.IDLE.IDLE));
     }
 
     packSaveDataJSON() {
@@ -97,7 +94,7 @@ export class Player {
                 return true;
             }
         }
-        let add = item;
+        let add = JSON.parse(JSON.stringify(item));
         add.amount = amount;
         this.items.value.push(add);
         this.items.trigger();
@@ -126,20 +123,21 @@ export class Player {
         for (let i = 0; i < this.items.value.length; i++) {
             if (this.items.value[i].id === item.id) {
                 let removed = amount + Math.min(0, (this.items.value[i].amount - amount));
-                this.items.value[i].amount -= amount;
+                this.items.value[i].amount -= removed;
                 if (this.items.value[i].amount <= 0)
                     this.items.value.splice(i, 1);
                 this.items.trigger();
                 return removed;
             }
         }
+        return 0;
     }
 
     /*
     Puts item in user bank
     */
-    depoistItem(item, amount = 1) {
-        let removed = removeItem(item, amount);
+    depositItem(item, amount = 1) {
+        let removed = this.removeItem(item, amount);
         USER.addBankItem(item, removed);
     }
 
@@ -148,6 +146,6 @@ export class Player {
     */
     withdrawItem(item, amount = 1) {
         let removed = USER.removeBankItem(item, amount);
-        addItem(item, removed);
+        this.addItem(item, removed);
     }
 }

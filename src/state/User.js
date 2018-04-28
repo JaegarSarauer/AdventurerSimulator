@@ -26,7 +26,7 @@ export class User {
 
         this.addBankItem(ITEM.BronzeAxe, 1);
 
-        //this.loadData();
+        this.loadData();
         this.autosaveLoop = setInterval(() => {
             this.saveData();
         }, 30000);
@@ -40,7 +40,7 @@ export class User {
                 await AsyncStorage.setItem(setter, this.players.value[i].packSaveDataJSON());
             }
         } catch (error) {
-            console.error(error);
+            throw error;
         }
     }
 
@@ -60,12 +60,12 @@ export class User {
                             this.players.trigger();
                         }
                     } catch (error) {
-                        console.error(error);
+                        throw error;
                     }
                 }
             }
         } catch (error) {
-            console.error(error);
+            throw error;
         }
     }
 
@@ -99,6 +99,7 @@ export class User {
     }
 
     addBankItem(item, amount = 1) {
+        console.info(item);
         for (let i = 0; i < this.bank.value.length; i++) {
             if (this.bank.value[i].id === item.id) {
                 this.bank.value[i].amount += amount;
@@ -106,7 +107,7 @@ export class User {
                 return true;
             }
         }
-        let add = item;
+        let add = JSON.parse(JSON.stringify(item));
         add.amount = amount;
         this.bank.value.push(add);
         this.bank.trigger();

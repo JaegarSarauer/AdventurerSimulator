@@ -80,11 +80,10 @@ export const WOODCUTTING = {
         }
     },
     action: (TREE_TYPE, playerID) => {
-        let progress = 0;
         let update = () => {
-            progress += WOODCUTTING.getProgressIncrement(playerID);
-            if (progress >= TREE_TYPE.maxProgress) {
-                progress -= TREE_TYPE.maxProgress;
+            TREE_TYPE.progress += WOODCUTTING.getProgressIncrement(playerID);
+            if (TREE_TYPE.progress >= TREE_TYPE.maxProgress) {
+                TREE_TYPE.progress -= TREE_TYPE.maxProgress;
                 USER.players.value[playerID].addItem(TREE_TYPE.reward.item, TREE_TYPE.reward.itemAmount);
                 USER.players.value[playerID].addXP(SKILL.Woodcutting, TREE_TYPE.reward.xp);
             }

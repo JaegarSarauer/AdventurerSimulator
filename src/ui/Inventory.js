@@ -1,11 +1,13 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet, Image} from 'react-native';
+import { Button, View, Text, StyleSheet, Image, Modal} from 'react-native';
 import {User, USER} from '../state/User'; 
 
 export default class Inventory extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showDeopsitModal: false,
+      modalItem: null,
       items: [],
     };
     this.itemsToken = null;
@@ -21,17 +23,61 @@ export default class Inventory extends React.Component {
     this.itemsToken.stop();
   }
 
+  depositItem(item, amount) {
+    let removed = USER.getCurrentPlayer().removeItem(item,amount);
+    USER.addBankItem(item, removed);
+    //USER.getCurrentPlayer().depositItem(item, amount);
+    this.setState({
+      showDeopsitModal: false,
+      modalItem: null,
+    });
+  }
+
   render() {
     if (this.state.items.length === 0)
       return (<Text style={styles.centerText}>You have no items!</Text>);
     return (
       <View style={styles.container}>
         {this.state.items.map(item =>
-          <View key={item.id} style={styles.item}>
+          <View 
+            key={item.id} 
+            style={styles.item}
+            onTouchEnd={() => {this.setState({
+              showDeopsitModal: true, 
+              modalItem: item
+            })}} 
+          >
             <Image source={item.icon}/>
             <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
           </View>
         )}
+        <Modal
+          animationType='slide'
+          transparent={false}
+          visible={this.state.showDeopsitModal}
+          onRequestClose={() => {this.setState({showDeopsitModal: false})}}
+        >
+            <View style={modal.buttons3}>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit 1' onPress={() => {this.depositItem(this.state.modalItem, 1)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit 5' onPress={() => {this.depositItem(this.state.modalItem, 5)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit 10' onPress={() => {this.depositItem(this.state.modalItem, 10)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit 50' onPress={() => {this.depositItem(this.state.modalItem, 50)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit All' onPress={() => {this.depositItem(this.state.modalItem, this.state.modalItem.amount)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Deposit All Except 1' onPress={() => {this.depositItem(this.state.modalItem, this.state.modalItem.amount - 1)}}/>
+                </View>
+            </View>
+        </Modal>
       </View>
     );
   }
@@ -63,5 +109,22 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       textAlignVertical: 'center',
       fontSize: 18,
-  }
+  
+    }
+})
+
+const modal = StyleSheet.create({
+  buttons3: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  buttonContainer: {
+      width: '100%',
+      padding: 10,
+  },
+  button: {
+      padding: 16,
+      width: '100%',
+  },
 })

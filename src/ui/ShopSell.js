@@ -27,13 +27,17 @@ export default class Shop extends React.Component {
   sellItem(item, amount) {
     amount = Math.min(amount, USER.getCurrentPlayer().getItemAmount(item));
     if (amount === 0) {
-      this.setState({showSellModal: false});
+      this.setState({
+        showSellModal: false,
+        modalItem: null
+      });
       return;
     }
     USER.getCurrentPlayer().removeItem(item, amount);
     USER.getCurrentPlayer().addItem(ITEM.Coins, amount * item.value);
     this.setState({
       showSellModal: false,
+      modalItem: null,
     });
   }
 

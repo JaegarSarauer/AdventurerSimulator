@@ -36,7 +36,10 @@ export default class Home extends React.Component {
   }
 
   showBuyPlayer() {
-    this.setState({showBuyPlayer: true});
+    this.setState({
+      showBuyPlayer: true,
+      newPlayerName: 'Adventurer ' + (USER.totalPlayers.value + 1)
+    });
   }
   
   buyPlayer() {

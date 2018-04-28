@@ -9,24 +9,36 @@ export default class Shop extends React.Component {
     this.state = {
       showSellModal: false,
       modalItem: null,
+      items: [],
     };
+    this.itemsToken = null;
+  }
+
+  componentWillMount() {
+    this.itemsToken = USER.getCurrentPlayer().items.watch(items => {
+      this.setState({items});
+    })
+  }
+
+  componentWillUnmount() {
+    this.itemsToken.stop();
   }
 
   sellItem(item, amount) {
-    amount = Math.min(amount, USER.players[USER.viewingPlayer].getItemAmount(item));
+    amount = Math.min(amount, USER.getCurrentPlayer().getItemAmount(item));
     if (amount === 0) {
       this.setState({showSellModal: false});
       return;
     }
-    USER.players[USER.viewingPlayer].removeItem(item, amount);
-    USER.players[USER.viewingPlayer].addItem(ITEM.Coins, amount * item.value);
+    USER.getCurrentPlayer().removeItem(item, amount);
+    USER.getCurrentPlayer().addItem(ITEM.Coins, amount * item.value);
     this.setState({
       showSellModal: false,
     });
   }
 
   render() {
-    const items = USER.players[USER.viewingPlayer].items.filter(item => {return item.id !== ITEM.Coins.id});
+    const items = this.state.items.filter(item => {return item.id !== ITEM.Coins.id});
     if (items.length === 0)
       return (<Text style={styles.centerText}>No items to sell!</Text>);
     return (

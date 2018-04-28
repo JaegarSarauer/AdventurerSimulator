@@ -11,13 +11,13 @@ export class GameState {
     }
 
     getPlayerCost() {
-        if (USER.totalPlayers === 0)
+        if (USER.totalPlayers.get() === 0)
             return 0;
         return this.playerCost;
     }
 
     buyPlayer(name) {
-        if (USER.totalPlayers === 0) {
+        if (USER.totalPlayers.get() === 0) {
             USER.addPlayer(name);
             return true;
         }

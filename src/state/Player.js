@@ -4,6 +4,7 @@ import { AsyncStorage } from 'react-native';
 import { ITEM } from '../def/Item';
 import { SKILL } from '../def/Skill';
 import * as Activities from '../def/Activity';
+import Subscriber from '../util/Subscriber';
 
 const STORES = {
     Items: '@PlayerItems',
@@ -15,43 +16,42 @@ const XP_TABLE = [0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 18
 
 export class Player {
     constructor(name) {
-        this.name = name;
-        //current action that this player is doing. some loop.
-        this.activity = Activities.IDLE.action(Activities.IDLE.IDLE);
-        this.items = [];
-        this.skills = [{
+        this.name = new Subscriber(name);
+        //current action that this player is doing. Activities manage themselves.
+        this.activity = new Subscriber(Activities.IDLE.action(Activities.IDLE.IDLE));
+        this.items = new Subscriber([]);
+        this.skills = new Subscriber([{
             name: 'Woodcutting',
             xp: 0,
             level: 1,
-        }];
+        }]);
     }
 
     /*
     Call action first and pass the return into this.
     */
     setActivity(activityResult) {
-        if (this.activity != null && this.activity.timer != null)
-            clearInterval(this.activity.timer);
-        if (this.activity != null && this.activity.timeout != null)
-            clearTimeout(this.activity.timeout);
-        this.activity = activityResult;
+        if (this.activity.value != null && this.activity.value.timer != null)
+            clearInterval(this.activity.value.timer);
+        if (this.activity.value != null && this.activity.value.timeout != null)
+            clearTimeout(this.activity.value.timeout);
+        this.activity.set(activityResult);
     }
 
     stopActivity() {
-        if (this.activity != null && this.activity.timer != null)
-            clearInterval(this.activity.timer);
-        if (this.activity != null && this.activity.timeout != null)
-            clearTimeout(this.activity.timeout);
+        if (this.activity.value != null && this.activity.value.timer != null)
+            clearInterval(this.activity.value.timer);
+        if (this.activity.value != null && this.activity.value.timeout != null)
+            clearTimeout(this.activity.value.timeout);
     }
 
     packSaveDataJSON() {
         //pack
         let allData = {
-            items: this.items,
-            bank: this.bank,
-            skills: this.skills,
-            activity: this.activity,
-            name: this.name,
+            items: this.items.get(),
+            skills: this.skills.get(),
+            activity: this.activity.get(),
+            name: this.name.get(),
         };
         //stringify
         return JSON.stringify(allData);
@@ -59,21 +59,21 @@ export class Player {
 
     unpackSaveDataJSON(data) {
         let results = JSON.parse(data);
-        this.items = results.items;
-        this.bank = results.bank;
-        this.skills = results.skills;
-        this.name = results.name;
-        this.activity = results.activity;
+        this.items = new Subscriber(results.items);
+        this.skills = new Subscriber(results.skills);
+        this.name = new Subscriber(results.name);
+        this.activity = new Subscriber(results.activity);
         //update definitions here maybe?
     }
 
     addXP(skill, xp) {
-        this.skills[skill.id].xp += xp;
-        this.skills[skill.id].level = this.calcLevel(this.skills[skill.id].level, this.skills[skill.id].xp);
+        this.skills.value[skill.id].xp += xp;
+        this.skills.value[skill.id].level = this.calcLevel(this.skills.value[skill.id].level, this.skills.value[skill.id].xp);
+        this.skills.trigger();
     }
 
     hasLevel(skill, level) {
-        return this.skills[skill.id].level >= level;
+        return this.skills.value[skill.id].level >= level;
     }
 
     calcLevel(curLevel, xp) {
@@ -90,43 +90,46 @@ export class Player {
     }
 
     addItem(item, amount = 1) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].id === item.id) {
-                this.items[i].amount += amount;
+        for (let i = 0; i < this.items.value.length; i++) {
+            if (this.items.value[i].id === item.id) {
+                this.items.value[i].amount += amount;
+                this.items.trigger();
                 return true;
             }
         }
         let add = item;
         add.amount = amount;
-        this.items.push(add);
+        this.items.value.push(add);
+        this.items.trigger();
         return true;
     }
 
     hasItem(item, amount = 1) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].id === item.id) {
-                return this.items[i].amount < amount;
+        for (let i = 0; i < this.items.value.length; i++) {
+            if (this.items.value[i].id === item.id) {
+                return this.items.value[i].amount < amount;
             }
         }
         return false;
     }
 
     getItemAmount(item) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].id === item.id) {
-                return this.items[i].amount;
+        for (let i = 0; i < this.items.value.length; i++) {
+            if (this.items.value[i].id === item.id) {
+                return this.items.value[i].amount;
             }
         }
         return 0;
     }
 
     removeItem(item, amount = 1) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].id === item.id) {
-                let removed = amount + Math.min(0, (this.items[i].amount - amount));
-                this.items[i].amount -= amount;
-                if (this.items[i].amount <= 0)
-                    this.items.splice(i, 1);
+        for (let i = 0; i < this.items.value.length; i++) {
+            if (this.items.value[i].id === item.id) {
+                let removed = amount + Math.min(0, (this.items.value[i].amount - amount));
+                this.items.value[i].amount -= amount;
+                if (this.items.value[i].amount <= 0)
+                    this.items.value.splice(i, 1);
+                this.items.trigger();
                 return removed;
             }
         }

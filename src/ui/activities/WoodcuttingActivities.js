@@ -26,62 +26,62 @@ export default class WoodcuttingActivities extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 1) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 1) && 
           <View style={styles.activity}>
           <Activity 
             title='Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.TREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.TREE, USER.viewingPlayer.value));
             }}
           />
           </View>
         }
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 15) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 15) && 
           <View style={styles.activity}>
           <Activity 
             title='Oak Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.OAKTREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.OAKTREE, USER.viewingPlayer.value));
             }}
           />
           </View>
         }
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 30) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 30) && 
           <View style={styles.activity}>
           <Activity 
             title='Willow Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.WILLOWTREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.WILLOWTREE, USER.viewingPlayer.value));
             }}
           />
           </View>
         }
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 45) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 45) && 
           <View style={styles.activity}>
           <Activity 
             title='Maple Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.MAPLETREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.MAPLETREE, USER.viewingPlayer.value));
             }}
           />
           </View>
         }
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 60) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 60) && 
           <View style={styles.activity}>
           <Activity 
             title='Yew Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.YEWTREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.YEWTREE, USER.viewingPlayer.value));
             }}
           />
           </View>
         }
-        {USER.players[USER.viewingPlayer].hasLevel(SKILL.Woodcutting, 80) && 
+        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 80) && 
           <View style={styles.activity}>
           <Activity 
             title='Arbutus Tree'
             onPress={() => {
-              USER.players[USER.viewingPlayer].setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.ARBUTUSTREE, USER.viewingPlayer));
+              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.ARBUTUSTREE, USER.viewingPlayer.value));
             }}
           />
           </View>

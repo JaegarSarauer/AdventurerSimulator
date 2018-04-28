@@ -10,8 +10,10 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       showBuyPlayer: false,
-      newPlayerName: 'Adventurer ' + USER.totalPlayers + 1,
+      players: [],
+      newPlayerName: 'Adventurer ' + (USER.totalPlayers.value + 1),
     }
+    this.playersToken = null;
   }
 
   // static navigationOptions = ({ navigation }) => ({
@@ -22,8 +24,15 @@ export default class Home extends React.Component {
   //       },
   // });
 
-  componentDidMount() {
-    USER.viewingPlayer = -1;
+  componentWillMount() {
+    USER.viewingPlayer.set(-1);
+    this.playersToken = USER.players.watch((players) => {
+      this.setState({players})
+    })
+  }
+
+  componentWillUnmount() {
+    this.playersToken.stop();
   }
 
   showBuyPlayer() {
@@ -40,8 +49,8 @@ export default class Home extends React.Component {
   }
 
   showPlayer(playerID) {
-    USER.viewingPlayer = playerID;
-    this.props.navigation.navigate('Player', { title: 'Adv. ' + USER.players[playerID].name })
+    USER.viewingPlayer.set(playerID);
+    this.props.navigation.navigate('Player', { title: 'Adv. ' + USER.players.get()[playerID].name })
   }
 
   render() {
@@ -53,9 +62,9 @@ export default class Home extends React.Component {
         <View style={styles.buttonContainer}>
           <Button style={styles.button} title='Bank' onPress={() => this.showBank()}/>
         </View>
-        {USER.players.map((player, i) => 
+        {this.state.players.map((player, i) => 
           <View key={i} style={styles.buttonContainer}>
-            <Button style={styles.button} title={'View ' + player.name} onPress={() => this.showPlayer(i)}/>
+            <Button style={styles.button} title={'View ' + player.name.get()} onPress={() => this.showPlayer(i)}/>
           </View>
         )}
 

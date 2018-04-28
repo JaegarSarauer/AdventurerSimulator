@@ -3,28 +3,36 @@ import { Button, View, Text, StyleSheet} from 'react-native';
 import {USER, User} from '../state/User';
 
 export default class PlayerHeader extends React.Component {
-
-  showInventory() {
-    this.props.navigation.navigate('Inventory', { title: 'Inventory' })
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      activity: null,
+    };
+    this.nameToken = null;
+    this.activityToken = null;
   }
 
-  showSkills() {
-    this.props.navigation.navigate('Skills', { title: 'Skills' })
+  componentWillMount() {
+    USER.getCurrentPlayer().name.watch((name) => {
+      this.setState({name});
+    });
+    USER.getCurrentPlayer().activity.watch((activity) => {
+      console.info(activity)
+      this.setState({activity});
+    });
   }
 
-  showShop() {
-    this.props.navigation.navigate('Shop', { title: 'Shop' })
-  }
-
-  showActivities() {
-    this.props.navigation.navigate('Activities', { title: 'Activities' })
+  componentWillUnmount() {
+    this.nameToken.stop();
+    this.activityToken.stop();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>{USER.players[USER.viewingPlayer].name + ' (Level 3)'}</Text>
-        <Text>{'Current Action: ' + USER.players[USER.viewingPlayer].activity.name}</Text>
+        <Text>{this.state.name + ' (Level 3)'}</Text>
+        <Text>{'Current Action: ' + this.state.activity.name}</Text>
       </View>
     );
   }

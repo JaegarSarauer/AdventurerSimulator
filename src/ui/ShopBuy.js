@@ -19,15 +19,15 @@ export default class Shop extends React.Component {
 
   buyItem(item, amount) {
     let cost = item.price * SHOP_BUY_MULITPLIER * amount;
-    let maxAmount = Math.min(amount, Math.floor(USER.players[USER.viewingPlayer].getItemAmount(ITEM.Coins) / cost)); //how many you want vs can afford.
+    let maxAmount = Math.min(amount, Math.floor(USER.getCurrentPlayer().getItemAmount(ITEM.Coins) / cost)); //how many you want vs can afford.
     cost = item.price * SHOP_BUY_MULITPLIER * maxAmount;
     if (maxAmount <= 0) {
       ToastAndroid.show('Not enough coins!', ToastAndroid.SHORT);
       this.setState({showBuyModal: false});
       return;
     }
-    USER.players[USER.viewingPlayer].removeItem(ITEM.Coins, cost);
-    USER.players[USER.viewingPlayer].addItem(item, maxAmount);
+    USER.getCurrentPlayer().removeItem(ITEM.Coins, cost);
+    USER.getCurrentPlayer().addItem(item, maxAmount);
     this.setState({
       showBuyModal: false,
     });

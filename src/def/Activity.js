@@ -17,7 +17,7 @@ export const IDLE = {
 
 export const WOODCUTTING = {
     getProgressIncrement: (viewingPlayerID) => {
-        return .75 + USER.players[viewingPlayerID].skills[SKILL.Woodcutting.id].level * .25;
+        return .75 + USER.players.get()[viewingPlayerID].skills.get()[SKILL.Woodcutting.id].level * .25;
     },
     TREE: {
         name: 'Cutting tree',
@@ -85,8 +85,8 @@ export const WOODCUTTING = {
             progress += WOODCUTTING.getProgressIncrement(playerID);
             if (progress >= TREE_TYPE.maxProgress) {
                 progress -= TREE_TYPE.maxProgress;
-                USER.players[playerID].addItem(TREE_TYPE.reward.item, TREE_TYPE.reward.itemAmount);
-                USER.players[playerID].addXP(SKILL.Woodcutting, TREE_TYPE.reward.xp);
+                USER.players.value[playerID].addItem(TREE_TYPE.reward.item, TREE_TYPE.reward.itemAmount);
+                USER.players.value[playerID].addXP(SKILL.Woodcutting, TREE_TYPE.reward.xp);
             }
         };
         TREE_TYPE.timer = setInterval(update, TICK_TIME);

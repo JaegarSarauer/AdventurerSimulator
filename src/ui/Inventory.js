@@ -3,6 +3,7 @@ import { Button, View, Text, StyleSheet, Image, Modal} from 'react-native';
 import {User, USER} from '../state/User'; 
 import * as ITEM from '../def/Item';
 import PlayerHeader from './PlayerHeader';
+import * as Functions from '../util/Functions';
 
 export default class Inventory extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class Inventory extends React.Component {
                 modalItem: ITEM.getItemById(id),
               })}} 
             >
-              <Text style={styles.amount}>{this.state.items[id].amount}</Text>
+              <Text style={styles.amount}>{Functions.formatCommas(this.state.items[id].amount)}</Text>
               <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
               <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
             </View>

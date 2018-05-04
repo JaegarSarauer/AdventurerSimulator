@@ -3,6 +3,7 @@ import { Button, View, Text, StyleSheet, Modal, Image, ToastAndroid} from 'react
 import {USER, User} from '../state/User'; 
 import * as ITEM from '../def/Item';
 import PlayerHeader from './PlayerHeader';
+import * as Functions from '../util/Functions';
 
 export const SHOP_BUY_MULITPLIER = 3;
 
@@ -13,9 +14,6 @@ export default class Shop extends React.Component {
       showBuyModal: false,
       modalItem: null,
       shopStock: {
-        1: {
-          amount: 10
-        }, 
         7: {
           amount: 10
         }, 
@@ -23,6 +21,15 @@ export default class Shop extends React.Component {
           amount: 10
         }, 
         9: {
+          amount: 10
+        }, 
+        10: {
+          amount: 10
+        }, 
+        11: {
+          amount: 10
+        }, 
+        12: {
           amount: 10
         }
       }, //id and amount
@@ -66,7 +73,7 @@ export default class Shop extends React.Component {
               key={id} 
               style={styles.item}
             >
-              <Text style={styles.amount}>{ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
+              <Text style={styles.amount}>{Functions.formatCommas(ITEM.getValueById(id) * SHOP_BUY_MULITPLIER) + " g"}</Text>
               <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
               <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
             </View>

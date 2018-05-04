@@ -3,6 +3,7 @@ import { Button, View, Text, StyleSheet, Modal, Image} from 'react-native';
 import {USER, User} from '../state/User'; 
 import * as ITEM from '../def/Item';
 import PlayerHeader from './PlayerHeader';
+import * as Functions from '../util/Functions';
 
 export default class Shop extends React.Component {
   constructor(props) {
@@ -57,7 +58,7 @@ export default class Shop extends React.Component {
               key={id} 
               style={styles.item}
             >
-              <Text style={styles.amount}>{this.state.items[id].amount}</Text>
+              <Text style={styles.amount}>{Functions.formatCommas(this.state.items[id].amount)}</Text>
               <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
               <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
             </View>

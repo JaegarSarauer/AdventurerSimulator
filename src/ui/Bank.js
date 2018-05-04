@@ -3,6 +3,7 @@ import { Button, View, Text, StyleSheet, Image, Modal} from 'react-native';
 import {USER, User} from '../state/User'; 
 import * as ITEM from '../def/Item';
 import PlayerHeader from './PlayerHeader';
+import * as Functions from '../util/Functions';
 
 export default class Bank extends React.Component {
   constructor(props) {
@@ -58,7 +59,7 @@ export default class Bank extends React.Component {
                 }
             }} 
             >
-              <Text style={styles.amount}>{this.state.bank[id].amount}</Text>
+              <Text style={styles.amount}>{Functions.formatCommas(this.state.bank[id].amount)}</Text>
               <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
               <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
             </View>

@@ -1,8 +1,10 @@
-import { SKILL } from '../def/Skill';
-import { ITEM } from '../def/Item';
+import * as SKILL from '../def/Skill';
+import * as ITEM from '../def/Item';
 import { PLAYER, Player } from '../state/Player';
 import { USER, User } from '../state/User';
 import { GAMESTATE, GameState, TICK_TIME} from '../game/GameState';
+import {ToastAndroid} from 'react-native';
+
 
 export const IDLE = {
     IDLE: {
@@ -18,6 +20,26 @@ export const IDLE = {
 export const WOODCUTTING = {
     getProgressIncrement: (viewingPlayerID) => {
         return .75 + USER.players.get()[viewingPlayerID].skills.get()[0].level * .25;
+    },
+    getBestAxe: (viewingPlayerID) => {
+        let wcLevel = USER.players.get()[viewingPlayerID].skills.get()[0].level;
+        let bestItem = USER.players.get()[viewingPlayerID].getBestItem((id1, id2) => {
+            let i1 = ITEM.getItemById(id1);
+            let i2 = ITEM.getItemById(id2);
+            if (i1 != null && i1.skill != null && i1.skill[0] != null && i1.skill[0].level <= wcLevel) {
+                if (i2 != null && i2.skill != null && i2.skill[0] != null && i2.skill[0].level <= wcLevel) {
+                    if (i1.skill[0].boost > i2.skill[0].boost)
+                        return id1;
+                    return id2;
+                } else {
+                    return id1;
+                }
+            } else if (i2 != null && i2.skill != null && i2.skill[0] != null && i2.skill[0].level <= wcLevel) {
+                    return id2;
+            }
+            return -1;
+        });
+        return bestItem;
     },
     TREE: {
         name: 'Cutting tree',
@@ -81,12 +103,22 @@ export const WOODCUTTING = {
     },
     action: (TREE_TYPE, playerID) => {
         let type = JSON.parse(JSON.stringify(TREE_TYPE));
+        type.axe = ITEM.getItemById(WOODCUTTING.getBestAxe(playerID));
+        if (type.axe == null) {
+            ToastAndroid.show('You do not have an axe with a woodcutting level you can use.', ToastAndroid.SHORT);
+            return IDLE.action(IDLE.IDLE);
+        }
         let update = () => {
-            type.progress += WOODCUTTING.getProgressIncrement(playerID);
+            if (type.axe == null) {
+                User.players.value[playerID].stopActivity();
+                return;
+            }
+            type.progress += WOODCUTTING.getProgressIncrement(playerID) + type.axe.skill[0].boost;
             if (type.progress >= type.maxProgress) {
                 type.progress -= type.maxProgress;
                 USER.players.value[playerID].addItem(type.reward.itemID, type.reward.itemAmount);
                 USER.players.value[playerID].addXP(0, type.reward.xp);
+                type.axe = ITEM.getItemById(WOODCUTTING.getBestAxe(playerID));
             }
             USER.players.value[playerID].activity.trigger();
         };

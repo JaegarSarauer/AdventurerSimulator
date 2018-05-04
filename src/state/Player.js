@@ -1,8 +1,8 @@
 import React from 'react';
 import {USER, User} from './User';
 import { AsyncStorage } from 'react-native';
-import { ITEM } from '../def/Item';
-import { SKILL } from '../def/Skill';
+import * as ITEM from '../def/Item';
+import * as SKILL from '../def/Skill';
 import * as Activities from '../def/Activity';
 import Subscriber from '../util/Subscriber';
 
@@ -108,6 +108,31 @@ export class Player {
             }
         }
         return 1;
+    }
+
+    /*
+    Finds the best item id in the inventory defined by a compare function passed in.
+
+    The compare function takes 2 item ids and must return the best of the 2, or -1 if neither meet requirements.
+
+    Example, finds the most expensive item:
+
+    compare = (i1, i2) => {
+        if (i1.value > i2.value)
+            return i1;
+        return i2;
+    }
+
+    Returns:        The best id found, if none met, returns -1.
+    */
+    getBestItem(compare) {
+        let bestItem = -1;
+        let keys = Object.keys(this.items.value);
+        for (let i = 0; i < keys.length; i++) {
+            bestItem = compare(keys[i], bestItem);
+            console.info(bestItem)
+        }
+        return bestItem;
     }
 
     addItem(id, amount = 1) {

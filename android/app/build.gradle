@@ -101,7 +101,7 @@ android {
         applicationId "com.adventurersimulator"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 4
+        versionCode 6
         versionName "1.11"
         ndk {
             abiFilters "armeabi-v7a", "x86"

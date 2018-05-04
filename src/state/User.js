@@ -25,9 +25,9 @@ export class User {
         //The id of the player were looking through in the UI.
         this.viewingPlayer = new Subscriber(-1);
 
-        this.addBankItem(7, 1);
+        this.addBankItem(0, 100000);
 
-        this.loadData();
+        //this.loadData();
         this.autosaveLoop = setInterval(() => {
             this.saveData();
         }, 30000);

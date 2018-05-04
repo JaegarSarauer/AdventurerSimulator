@@ -80,16 +80,17 @@ export const WOODCUTTING = {
         }
     },
     action: (TREE_TYPE, playerID) => {
+        let type = JSON.parse(JSON.stringify(TREE_TYPE));
         let update = () => {
-            TREE_TYPE.progress += WOODCUTTING.getProgressIncrement(playerID);
-            if (TREE_TYPE.progress >= TREE_TYPE.maxProgress) {
-                TREE_TYPE.progress -= TREE_TYPE.maxProgress;
-                USER.players.value[playerID].addItem(TREE_TYPE.reward.itemID, TREE_TYPE.reward.itemAmount);
-                USER.players.value[playerID].addXP(0, TREE_TYPE.reward.xp);
+            type.progress += WOODCUTTING.getProgressIncrement(playerID);
+            if (type.progress >= type.maxProgress) {
+                type.progress -= type.maxProgress;
+                USER.players.value[playerID].addItem(type.reward.itemID, type.reward.itemAmount);
+                USER.players.value[playerID].addXP(0, type.reward.xp);
             }
             USER.players.value[playerID].activity.trigger();
         };
-        TREE_TYPE.timer = setInterval(update, TICK_TIME);
-        return TREE_TYPE;
+        type.timer = setInterval(update, TICK_TIME);
+        return type;
     }
 };

@@ -90,7 +90,7 @@ export default class Home extends React.Component {
                 <Button style={modal.button} title='Buy New Adventurer' onPress={() => {this.buyPlayer()}}/>
             </View>
         </Modal>
-            <Button style={styles.button} title={'KILL'} onPress={() => this.notARealFunction()}/>
+        <Button style={styles.button} title={'KILL'} onPress={() => this.notARealFunction()}/>
       </View>
     );
   }

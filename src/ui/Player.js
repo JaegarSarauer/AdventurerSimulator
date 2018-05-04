@@ -20,6 +20,10 @@ export default class Player extends React.Component {
     this.props.navigation.navigate('Activities', { title: 'Activities' })
   }
 
+  showBank() {
+    this.props.navigation.navigate('Bank', { title: 'Activities' })
+  }
+
   render() {
     return (
       <PlayerHeader>
@@ -35,6 +39,9 @@ export default class Player extends React.Component {
           </View>
           <View style={styles.buttonContainer}>
             <Button style={styles.button} title='Activities' onPress={() => this.showActivities()}/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.button} title='Bank' onPress={() => this.showBank()}/>
           </View>
         </View>
         </PlayerHeader>

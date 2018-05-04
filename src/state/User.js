@@ -88,6 +88,8 @@ export class User {
     }
 
     getCurrentPlayer() {
+        if (this.viewingPlayer.value == -1)
+            return null;
         return this.players.value[this.viewingPlayer.value];
     }
 

@@ -1,12 +1,15 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet, Image} from 'react-native';
+import { Button, View, Text, StyleSheet, Image, Modal} from 'react-native';
 import {USER, User} from '../state/User'; 
 import * as ITEM from '../def/Item';
+import PlayerHeader from './PlayerHeader';
 
 export default class Bank extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showWithdrawModal: false,
+      modalItem: null,
       bank: {},
     };
     this.bankToken = null;
@@ -22,25 +25,83 @@ export default class Bank extends React.Component {
     this.bankToken.stop();
   }
 
+  withdrawItem(item, amount) {
+    USER.getCurrentPlayer().withdrawItem(item.id, amount);
+    this.setState({
+      showWithdrawModal: false,
+      modalItem: null,
+    });
+  }
+
   render() {
-    if (this.state.bank.length === 0)
-      return (
+    let body = null;
+    if (this.state.bank.length === 0) {
+      body = (
         <View>
           <Text style={styles.centerText}>You have no items!</Text>
           <Text style={styles.centerText}>Tell some adventurers to go to the bank.</Text>
         </View>
       );
-    return (
-      <View style={styles.container}>
-        {Object.keys(this.state.bank).map(id =>
-          <View key={id} style={styles.item}>
-            <Text style={styles.amount}>{this.state.bank[id].amount}</Text>
-            <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
-            <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
-          </View>
-        )}
-      </View>
-    );
+    } else {
+      body = (
+        <View style={styles.container}>
+          {Object.keys(this.state.bank).map(id =>
+            <View 
+              key={id} 
+              style={styles.item}
+              onTouchEnd={() => {
+                if (USER.getCurrentPlayer() != null) {
+                  this.setState({
+                    showWithdrawModal: true, 
+                    modalItem: ITEM.getItemById(id),
+                  })
+                }
+            }} 
+            >
+              <Text style={styles.amount}>{this.state.bank[id].amount}</Text>
+              <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
+              <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
+            </View>
+          )}
+          <Modal
+            animationType='slide'
+            transparent={false}
+            visible={this.state.showWithdrawModal}
+            onRequestClose={() => {this.setState({showWithdrawModal: false})}}
+          >
+            <View style={modal.buttons3}>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw 1' onPress={() => {this.withdrawItem(this.state.modalItem, 1)}}/>
+               </View>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw 5' onPress={() => {this.withdrawItem(this.state.modalItem, 5)}}/>
+               </View>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw 10' onPress={() => {this.withdrawItem(this.state.modalItem, 10)}}/>
+               </View>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw 50' onPress={() => {this.withdrawItem(this.state.modalItem, 50)}}/>
+               </View>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw All Except 1' onPress={() => {this.withdrawItem(this.state.modalItem, this.state.bank[this.state.modalItem.id].amount - 1)}}/>
+               </View>
+               <View style={modal.buttonContainer}>
+                   <Button style={modal.button} title='Withdraw All' onPress={() => {this.withdrawItem(this.state.modalItem, this.state.bank[this.state.modalItem.id].amount)}}/>
+               </View>
+            </View>
+          </Modal>
+        </View>
+      );
+    }
+    if (USER.getCurrentPlayer() != null) {
+      return (
+        <PlayerHeader>
+          {body}
+        </PlayerHeader>
+      );
+    } else {
+      return body;
+    }
   }
 }
 const styles = StyleSheet.create({
@@ -93,4 +154,20 @@ const styles = StyleSheet.create({
       textAlignVertical: 'center',
       fontSize: 18,
   }
+})
+
+const modal = StyleSheet.create({
+  buttons3: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  buttonContainer: {
+      width: '100%',
+      padding: 10,
+  },
+  button: {
+      padding: 16,
+      width: '100%',
+  },
 })

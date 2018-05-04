@@ -21,8 +21,8 @@ export class GameState {
             USER.addPlayer(name);
             return true;
         }
-        if (USER.getBankItemAmount(ITEM.Coins) >= this.playerCost) {
-            USER.removeBankItem(ITEM.Coins, this.playerCost);
+        if (USER.getBankItemAmount(0) >= this.playerCost) {
+            USER.removeBankItem(0, this.playerCost);
             this.playerCost *= 3;
             USER.addPlayer(name);
             return true;

@@ -110,21 +110,21 @@ export class User {
         return true;
     }
 
-    hasBankItem(item, amount = 1) {
+    hasBankItem(id, amount = 1) {
         if (this.bank.value[id] != null) {
             return this.bank.value[id].amount >= amount;
         }
         return false;
     }
 
-    getBankItemAmount(item) {
+    getBankItemAmount(id) {
         if (this.bank.value[id] != null) {
             return this.bank.value[id].amount;
         }
         return 0;
     }
 
-    removeBankItem(item, amount = 1) {
+    removeBankItem(id, amount = 1) {
         if (this.bank.value[id] != null) {
             let removed = amount + Math.min(0, (this.bank.value[id].amount - amount));
             this.bank.value[id].amount -= removed;

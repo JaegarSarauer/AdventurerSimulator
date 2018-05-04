@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList} from 'react-native';
 import Button from './Button';
 import { ITEM } from '../def/Item';
 import Activity from './Activity';
+import PlayerHeader from './PlayerHeader';
 
 export default class Activities extends React.Component {
 
@@ -12,11 +13,13 @@ export default class Activities extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.activity}>
-          <Button title='Woodcutting' subTitle='Cut some logs' action={() => {this.visit('WoodcuttingActivities')}}/>
+      <PlayerHeader>
+        <View style={styles.container}>
+          <View style={styles.activity}>
+            <Button title='Woodcutting' subTitle='Cut some logs' action={() => {this.visit('WoodcuttingActivities')}}/>
+          </View>
         </View>
-      </View>
+      </PlayerHeader>
     );
   }
 }

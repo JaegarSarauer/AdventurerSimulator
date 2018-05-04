@@ -22,7 +22,7 @@ export const WOODCUTTING = {
     TREE: {
         name: 'Cutting tree',
         progress: 0,
-        maxProgress: 8,
+        maxProgress: 24,
         reward: {
             itemID: 1,
             itemAmount: 1,
@@ -32,7 +32,7 @@ export const WOODCUTTING = {
     OAKTREE: {
         name: 'Cutting oak tree',
         progress: 0,
-        maxProgress: 24,
+        maxProgress: 32,
         reward: {
             itemID: 2,
             itemAmount: 1,

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, View, Text, StyleSheet, Modal, Image} from 'react-native';
 import {USER, User} from '../state/User'; 
 import { ITEM } from '../def/Item';
+import PlayerHeader from './PlayerHeader';
 
 export default class Shop extends React.Component {
   constructor(props) {
@@ -22,14 +23,16 @@ export default class Shop extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={modal.buttonContainer}>
-            <Button style={modal.button} title='Buy Items' onPress={() => {this.showBuyItems()}}/>
+      <PlayerHeader>
+        <View style={styles.container}>
+          <View style={modal.buttonContainer}>
+              <Button style={modal.button} title='Buy Items' onPress={() => {this.showBuyItems()}}/>
+          </View>
+          <View style={modal.buttonContainer}>
+              <Button style={modal.button} title='Sell Items' onPress={() => {this.showSellItems()}}/>
+          </View>
         </View>
-        <View style={modal.buttonContainer}>
-            <Button style={modal.button} title='Sell Items' onPress={() => {this.showSellItems()}}/>
-        </View>
-      </View>
+      </PlayerHeader>
     );
   }
 }

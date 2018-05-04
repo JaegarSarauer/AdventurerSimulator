@@ -39,14 +39,19 @@ export default class PlayerHeader extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.name + ' : Total Level ' + USER.getCurrentPlayer().totalLevel.get()}</Text>
-        {this.state.activity != null &&
-          <Text>{'Current Action: ' + this.state.activity.name}</Text>
-        }
-        {this.state.activity != null &&
-          <ProgressBar progress={this.state.activity.progress / this.state.activity.maxProgress} />
-        }
-        <Text>{'Coins: ' + USER.getCurrentPlayer().getItemAmount(0)}</Text>
+        <View style={styles.header}>
+          <Text>{this.state.name + ' : Total Level ' + USER.getCurrentPlayer().totalLevel.get()}</Text>
+          {this.state.activity != null &&
+            <Text>{'Current Action: ' + this.state.activity.name}</Text>
+          }
+          {this.state.activity != null &&
+            <ProgressBar progress={this.state.activity.progress / this.state.activity.maxProgress} />
+          }
+          <Text>{'Coins: ' + USER.getCurrentPlayer().getItemAmount(0)}</Text>
+        </View>
+        <View style={styles.body}>
+          {this.props.children}
+        </View>
       </View>
     );
   }
@@ -55,12 +60,25 @@ export default class PlayerHeader extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    margin: 0,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    backgroundColor: 'white',
+    height: '100%',
+    width: '100%',
+  },
+  header: {
+    flex: 1,
     marginTop: 0,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     backgroundColor: 'grey',
-    height: 80,
-    maxHeight: 80,
+    minHeight: 40,
+    width: '100%',
+  },
+  body: {
+    flex: 10,
+    backgroundColor: 'brown',
     width: '100%',
   },
 });

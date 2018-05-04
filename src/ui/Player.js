@@ -22,21 +22,22 @@ export default class Player extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <PlayerHeader/>
-        <View style={styles.buttonContainer}>
-          <Button style={styles.button} title='Inventory' onPress={() => this.showInventory()}/>
+      <PlayerHeader>
+        <View style={styles.container}>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.button} title='Inventory' onPress={() => this.showInventory()}/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.button} title='Skills' onPress={() => this.showSkills()}/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.button} title='Shop' onPress={() => this.showShop()}/>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.button} title='Activities' onPress={() => this.showActivities()}/>
+          </View>
         </View>
-        <View style={styles.buttonContainer}>
-          <Button style={styles.button} title='Skills' onPress={() => this.showSkills()}/>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button style={styles.button} title='Shop' onPress={() => this.showShop()}/>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button style={styles.button} title='Activities' onPress={() => this.showActivities()}/>
-        </View>
-      </View>
+        </PlayerHeader>
     );
   }
 }

@@ -7,6 +7,7 @@ import * as IMAGE from '../../def/Image';
 import Activity from './../Activity';
 import Float from '../Float';
 import * as Activities from '../../def/Activity';
+import PlayerHeader from '../PlayerHeader';
 
 export default class WoodcuttingActivities extends React.Component {
   constructor(props) {
@@ -25,68 +26,70 @@ export default class WoodcuttingActivities extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {USER.getCurrentPlayer().hasLevel(0, 1) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.TREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-        {USER.getCurrentPlayer().hasLevel(0, 15) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Oak Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.OAKTREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-        {USER.getCurrentPlayer().hasLevel(0, 30) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Willow Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.WILLOWTREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-        {USER.getCurrentPlayer().hasLevel(0, 45) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Maple Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.MAPLETREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-        {USER.getCurrentPlayer().hasLevel(0, 60) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Yew Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.YEWTREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-        {USER.getCurrentPlayer().hasLevel(0, 80) && 
-          <View style={styles.activity}>
-          <Activity 
-            title='Arbutus Tree'
-            onPress={() => {
-              USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.ARBUTUSTREE, USER.viewingPlayer.value));
-            }}
-          />
-          </View>
-        }
-      </View>
+      <PlayerHeader>
+        <View style={styles.container}>
+          {USER.getCurrentPlayer().hasLevel(0, 1) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.TREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+          {USER.getCurrentPlayer().hasLevel(0, 15) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Oak Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.OAKTREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+          {USER.getCurrentPlayer().hasLevel(0, 30) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Willow Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.WILLOWTREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+          {USER.getCurrentPlayer().hasLevel(0, 45) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Maple Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.MAPLETREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+          {USER.getCurrentPlayer().hasLevel(0, 60) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Yew Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.YEWTREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+          {USER.getCurrentPlayer().hasLevel(0, 80) && 
+            <View style={styles.activity}>
+            <Activity 
+              title='Arbutus Tree'
+              onPress={() => {
+                USER.getCurrentPlayer().setActivity(Activities.WOODCUTTING.action(Activities.WOODCUTTING.ARBUTUSTREE, USER.viewingPlayer.value));
+              }}
+            />
+            </View>
+          }
+        </View>
+      </PlayerHeader>
     );
   }
 }

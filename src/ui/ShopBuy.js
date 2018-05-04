@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, View, Text, StyleSheet, Modal, Image, ToastAndroid} from 'react-native';
 import {USER, User} from '../state/User'; 
 import * as ITEM from '../def/Item';
+import PlayerHeader from './PlayerHeader';
 
 export const SHOP_BUY_MULITPLIER = 3;
 
@@ -50,49 +51,51 @@ export default class Shop extends React.Component {
 
   render() {
     if (Object.keys(this.state.shopStock).length === 0)
-      return (<Text style={styles.centerText}>No items for sale!</Text>);
+      return (<PlayerHeader><Text style={styles.centerText}>No items for sale!</Text></PlayerHeader>);
     return (
-      <View style={styles.container}>
-        {Object.keys(this.state.shopStock).map(id =>
-          <View 
-            onTouchEnd={() => {
-              this.setState({
-                showBuyModal: true, 
-                modalItem: ITEM.getItemById(id)
-              })
-            }} 
-            key={id} 
-            style={styles.item}
-          >
-            <Image source={ITEM.getIconById(id)}/>
-            <Text style={styles.text}>{ITEM.getNameById(id) + ": " + ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
-          </View>
-        )}
-        <Modal
-          animationType='slide'
-          transparent={false}
-          visible={this.state.showBuyModal}
-          onRequestClose={() => {this.setState({showBuyModal: false})}}
-        >
-            <View style={modal.buttons3}>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Buy 1' onPress={() => {this.buyItem(this.state.modalItem, 1)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Buy 5' onPress={() => {this.buyItem(this.state.modalItem, 5)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Buy 10' onPress={() => {this.buyItem(this.state.modalItem, 10)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Buy 50' onPress={() => {this.buyItem(this.state.modalItem, 50)}}/>
-                </View>
-                <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Buy All' onPress={() => {this.buyItem(this.state.modalItem, 2147483647)}}/>
-                </View>
+      <PlayerHeader>
+        <View style={styles.container}>
+          {Object.keys(this.state.shopStock).map(id =>
+            <View 
+              onTouchEnd={() => {
+                this.setState({
+                  showBuyModal: true, 
+                  modalItem: ITEM.getItemById(id)
+                })
+              }} 
+              key={id} 
+              style={styles.item}
+            >
+              <Image source={ITEM.getIconById(id)}/>
+              <Text style={styles.text}>{ITEM.getNameById(id) + ": " + ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
             </View>
-        </Modal>
-      </View>
+          )}
+          <Modal
+            animationType='slide'
+            transparent={false}
+            visible={this.state.showBuyModal}
+            onRequestClose={() => {this.setState({showBuyModal: false})}}
+          >
+              <View style={modal.buttons3}>
+                  <View style={modal.buttonContainer}>
+                      <Button style={modal.button} title='Buy 1' onPress={() => {this.buyItem(this.state.modalItem, 1)}}/>
+                  </View>
+                  <View style={modal.buttonContainer}>
+                      <Button style={modal.button} title='Buy 5' onPress={() => {this.buyItem(this.state.modalItem, 5)}}/>
+                  </View>
+                  <View style={modal.buttonContainer}>
+                      <Button style={modal.button} title='Buy 10' onPress={() => {this.buyItem(this.state.modalItem, 10)}}/>
+                  </View>
+                  <View style={modal.buttonContainer}>
+                      <Button style={modal.button} title='Buy 50' onPress={() => {this.buyItem(this.state.modalItem, 50)}}/>
+                  </View>
+                  <View style={modal.buttonContainer}>
+                      <Button style={modal.button} title='Buy All' onPress={() => {this.buyItem(this.state.modalItem, 2147483647)}}/>
+                  </View>
+              </View>
+          </Modal>
+        </View>
+      </PlayerHeader>
     );
   }
 }

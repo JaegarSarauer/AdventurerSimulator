@@ -14,7 +14,6 @@ export default class Bank extends React.Component {
 
   componentWillMount() {
     this.bankToken = USER.bank.watch((bank) => {
-      console.info('uu', bank)
       this.setState({bank});
     })
   }
@@ -35,7 +34,6 @@ export default class Bank extends React.Component {
       <View style={styles.container}>
         {Object.keys(this.state.bank).map(id =>
           <View key={id} style={styles.item}>
-            {console.info(' hey', id)}
             <Image source={ITEM.getIconById(id)}/>
             <Text style={styles.text}>{ITEM.getNameById(id) + ": " + this.state.bank[id].amount}</Text>
           </View>

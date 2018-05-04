@@ -115,4 +115,4 @@ typings/
 
 # keystore
 keystore/
-*.properties
+android/gradle.properties

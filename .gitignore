@@ -116,3 +116,6 @@ typings/
 # keystore
 keystore/
 android/gradle.properties
+
+#log files
+*.out

@@ -1,0 +1,1835 @@
+Scanning folders for symlinks in /Users/jaegarsarauer/Documents/DATA/Incremental-React/LifeSimulator/AdventurerSimulator/node_modules (32ms)
+Starting the logger (adb logcat *:S ReactNative:V ReactNativeJS:V)...
+--------- beginning of crash
+--------- beginning of system
+--------- beginning of main
+05-03 21:00:25.775 19688 19688 D ReactNative: ReactInstanceManager.ctor()
+05-03 21:00:25.866 19688 19688 D ReactNative: ReactInstanceManager.createReactContextInBackground()
+05-03 21:00:25.866 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackgroundInner()
+05-03 21:00:27.363 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:00:27.364 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:00:27.364 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:00:27.388 19688 19891 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:00:27.540 19688 19891 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:00:27.543 19688 19891 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:00:27.558 19688 19891 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:00:27.558 19688 19891 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:00:27.559 19688 19905 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:00:27.559 19688 19905 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:00:27.561 19688 19905 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:00:28.498 19688 19904 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":1}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:01:16.104 19688 19904 I ReactNativeJS: 'uu', { '7': { amount: 1 } }
+05-03 21:01:16.105 19688 19904 I ReactNativeJS: ' hey', '7'
+05-03 21:01:16.136 19688 19904 I ReactNativeJS: '7', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:01:16.136 19688 19904 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 7, name: 'Bronze Axe', value: 20, icon: 2 }
+05-03 21:03:12.261 19688 19904 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:03:12.261 19688 19904 E ReactNativeJS: 
+05-03 21:03:12.261 19688 19904 E ReactNativeJS: This error is located at:
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:12.261 19688 19904 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:03:12.280 19688 19904 E ReactNativeJS: 
+05-03 21:03:12.280 19688 19904 E ReactNativeJS: This error is located at:
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:12.280 19688 19904 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:13.525 19688 19904 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:13.766 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:03:13.766 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:03:13.766 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:03:13.766 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:03:13.769 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:03:13.771 19688 20915 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:03:13.838 19688 20916 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:03:13.860 19688 20915 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:03:13.862 19688 20915 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:03:13.868 19688 20915 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:03:13.868 19688 20915 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:03:13.869 19688 20919 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:03:13.869 19688 20919 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:03:13.869 19688 20919 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:03:14.532 19688 20918 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":11}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:03:43.275 19688 20918 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'item.id')
+05-03 21:03:43.275 19688 20918 E ReactNativeJS: 
+05-03 21:03:43.275 19688 20918 E ReactNativeJS: This error is located at:
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:43.275 19688 20918 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'item.id')
+05-03 21:03:43.300 19688 20918 E ReactNativeJS: 
+05-03 21:03:43.300 19688 20918 E ReactNativeJS: This error is located at:
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:43.300 19688 20918 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:47.379 19688 19688 D ReactNative: ReactInstanceManager.detachViewFromInstance()
+05-03 21:03:48.969 19688 19688 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:03:48.971 19688 20918 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":21}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:03:57.367 19688 20918 E ReactNativeJS: ReferenceError: Can't find variable: ITEM
+05-03 21:03:57.367 19688 20918 E ReactNativeJS: 
+05-03 21:03:57.367 19688 20918 E ReactNativeJS: This error is located at:
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:57.367 19688 20918 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS: ReferenceError: Can't find variable: ITEM
+05-03 21:03:57.378 19688 20918 E ReactNativeJS: 
+05-03 21:03:57.378 19688 20918 E ReactNativeJS: This error is located at:
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:57.378 19688 20918 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:03:58.778 19688 20918 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:04:26.236 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:04:26.237 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:04:26.237 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:04:26.237 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:04:26.240 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:04:26.242 19688 21082 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:04:26.312 19688 20978 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:04:26.317 19688 21082 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:04:26.318 19688 21082 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:04:26.324 19688 21082 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:04:26.324 19688 21082 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:04:26.324 19688 21085 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:04:26.324 19688 21085 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:04:26.325 19688 21085 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:04:26.984 19688 21084 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":31}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:04:36.058 19688 21084 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(_this3.state.items[id])')
+05-03 21:04:36.058 19688 21084 E ReactNativeJS: 
+05-03 21:04:36.058 19688 21084 E ReactNativeJS: This error is located at:
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:04:36.058 19688 21084 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(_this3.state.items[id])')
+05-03 21:04:36.092 19688 21084 E ReactNativeJS: 
+05-03 21:04:36.092 19688 21084 E ReactNativeJS: This error is located at:
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:04:36.092 19688 21084 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:04:37.944 19688 21084 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:05:01.483 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:05:01.485 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:05:01.485 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:05:01.485 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:05:01.490 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:05:01.492 19688 21147 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:05:01.578 19688 21147 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:05:01.578 19688 21139 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:05:01.588 19688 21147 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:05:01.594 19688 21147 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:05:01.594 19688 21147 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:05:01.594 19688 21150 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:05:01.594 19688 21150 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:05:01.595 19688 21150 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:05:02.236 19688 21149 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":41}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:05:10.442 19688 21149 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(id)')
+05-03 21:05:10.442 19688 21149 E ReactNativeJS: 
+05-03 21:05:10.442 19688 21149 E ReactNativeJS: This error is located at:
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:05:10.442 19688 21149 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(id)')
+05-03 21:05:10.459 19688 21149 E ReactNativeJS: 
+05-03 21:05:10.459 19688 21149 E ReactNativeJS: This error is located at:
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:05:10.459 19688 21149 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:05:12.475 19688 21149 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:06:15.396 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:06:15.396 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:06:15.396 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:06:15.396 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:06:15.402 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:06:15.406 19688 21261 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:06:15.475 19688 21243 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:06:15.485 19688 21261 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:06:15.488 19688 21261 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:06:15.494 19688 21261 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:06:15.494 19688 21261 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:06:15.495 19688 21264 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:06:15.495 19688 21264 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:06:15.496 19688 21264 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:06:16.151 19688 21263 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":51}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:06:25.173 19688 21263 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(id)')
+05-03 21:06:25.173 19688 21263 E ReactNativeJS: 
+05-03 21:06:25.173 19688 21263 E ReactNativeJS: This error is located at:
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:06:25.173 19688 21263 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS: TypeError: undefined is not a function (evaluating '_Item.ITEM.getNameById(id)')
+05-03 21:06:25.208 19688 21263 E ReactNativeJS: 
+05-03 21:06:25.208 19688 21263 E ReactNativeJS: This error is located at:
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:06:25.208 19688 21263 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Inventory (at SceneView.js:17)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:06:27.156 19688 21263 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:07:22.312 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:07:22.313 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:07:22.313 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:07:22.313 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:07:22.315 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:07:22.317 19688 21361 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:07:22.385 19688 21361 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:07:22.388 19688 21361 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:07:22.396 19688 21361 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:07:22.396 19688 21361 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:07:22.397 19688 21364 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:07:22.397 19688 21364 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:07:22.398 19688 21364 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:07:22.412 19688 21350 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:07:23.074 19688 21363 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":61}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:07:30.797 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:30.797 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:32.928 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:32.928 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:35.034 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:35.034 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:37.146 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:37.146 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:39.275 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:39.275 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:41.399 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:41.399 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:43.527 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:43.527 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:45.628 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:45.628 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:47.752 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:47.752 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:49.881 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:49.881 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:51.992 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:51.992 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:54.098 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:54.098 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:56.216 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:56.216 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:07:58.346 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:07:58.346 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:00.465 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:00.465 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:02.588 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:02.588 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:04.707 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:04.707 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:06.543 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:06.543 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:08.134 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:08.134 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:09.991 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:09.991 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:11.587 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:11.587 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:13.175 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:13.175 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:15.026 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:15.026 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:16.599 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:16.599 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:18.453 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:18.453 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:20.046 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:20.046 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:21.638 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:21.638 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:23.540 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:23.540 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:25.081 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:25.081 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:26.940 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:26.940 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:28.528 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:28.528 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:30.106 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:30.106 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:31.977 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:31.977 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:33.563 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:33.563 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:35.428 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:35.428 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:36.727 19688 21363 I ReactNativeJS: '1', { '0': { id: 0, name: 'Coins', value: 1, icon: 1 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '1': { id: 1, name: 'Logs', value: 3, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '2': { id: 2, name: 'Oak Logs', value: 6, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '3': { id: 3, name: 'Willow Logs', value: 10, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '4': { id: 4, name: 'Maple Logs', value: 15, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '5': { id: 5, name: 'Yew Logs', value: 20, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '6': { id: 6, name: 'Arbutus Logs', value: 30, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '7': { id: 7, name: 'Bronze Axe', value: 20, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '8': { id: 8, name: 'Iron Axe', value: 40, icon: 2 },
+05-03 21:08:36.727 19688 21363 I ReactNativeJS:   '9': { id: 9, name: 'Steel Axe', value: 200, icon: 2 } }, { id: 1, name: 'Logs', value: 3, icon: 2 }
+05-03 21:08:38.160 19688 21363 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:08:38.160 19688 21363 E ReactNativeJS: 
+05-03 21:08:38.160 19688 21363 E ReactNativeJS: This error is located at:
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:08:38.160 19688 21363 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:08:38.183 19688 21363 E ReactNativeJS: 
+05-03 21:08:38.183 19688 21363 E ReactNativeJS: This error is located at:
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:08:38.183 19688 21363 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:08:39.241 19688 19688 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:08:39.241 19688 19688 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:08:39.242 19688 19688 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:08:39.242 19688 19688 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:08:39.243 19688 19688 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:08:39.244 19688 21483 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:08:39.310 19688 21482 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:08:39.313 19688 21483 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:08:39.314 19688 21483 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:08:39.319 19688 21483 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:08:39.319 19688 21483 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:08:39.319 19688 21485 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:08:39.319 19688 21485 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:08:39.320 19688 21485 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:08:39.979 19688 21484 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":71}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:08:55.703 19688 21484 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'item.id')
+05-03 21:08:55.703 19688 21484 E ReactNativeJS: 
+05-03 21:08:55.703 19688 21484 E ReactNativeJS: This error is located at:
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:08:55.703 19688 21484 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'item.id')
+05-03 21:08:55.725 19688 21484 E ReactNativeJS: 
+05-03 21:08:55.725 19688 21484 E ReactNativeJS: This error is located at:
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:08:55.725 19688 21484 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:16:37.143 22689 22689 D ReactNative: ReactInstanceManager.ctor()
+05-03 21:16:37.188 22689 22689 D ReactNative: ReactInstanceManager.createReactContextInBackground()
+05-03 21:16:37.189 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackgroundInner()
+05-03 21:16:37.190 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:16:37.191 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:16:37.191 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:16:37.240 22689 22712 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:16:37.375 22689 22712 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:16:37.378 22689 22712 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:16:37.391 22689 22712 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:16:37.391 22689 22712 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:16:37.393 22689 22719 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:16:37.393 22689 22719 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:16:37.394 22689 22719 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:16:38.090 22689 22718 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":1}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:16:39.518 22689 22718 E ReactNativeJS: undefined is not a function (evaluating '_this3.notARealFunction()')
+05-03 21:16:41.053 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:16:41.053 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:16:41.053 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:16:41.053 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:16:41.056 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:16:41.058 22689 22741 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:16:41.103 22689 22707 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:16:41.130 22689 22741 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:16:41.132 22689 22741 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:16:41.138 22689 22741 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:16:41.138 22689 22741 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:16:41.138 22689 22743 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:16:41.138 22689 22743 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:16:41.139 22689 22743 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:16:41.794 22689 22742 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":11}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:16:48.994 22689 22742 E ReactNativeJS: TypeError: Requested keys of a value that is not an object.
+05-03 21:16:48.994 22689 22742 E ReactNativeJS: 
+05-03 21:16:48.994 22689 22742 E ReactNativeJS: This error is located at:
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:16:48.994 22689 22742 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS: TypeError: Requested keys of a value that is not an object.
+05-03 21:16:49.012 22689 22742 E ReactNativeJS: 
+05-03 21:16:49.012 22689 22742 E ReactNativeJS: This error is located at:
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:16:49.012 22689 22742 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:17:42.872 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:17:42.872 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:17:42.872 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:17:42.872 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:17:42.876 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:17:42.879 22689 22836 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:17:42.949 22689 22829 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:17:42.968 22689 22836 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:17:42.971 22689 22836 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:17:42.977 22689 22836 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:17:42.977 22689 22836 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:17:42.977 22689 22838 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:17:42.977 22689 22838 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:17:42.978 22689 22838 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:17:43.631 22689 22837 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":21}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:17:56.617 22689 22837 E ReactNativeJS: TypeError: Requested keys of a value that is not an object.
+05-03 21:17:56.617 22689 22837 E ReactNativeJS: 
+05-03 21:17:56.617 22689 22837 E ReactNativeJS: This error is located at:
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:17:56.617 22689 22837 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS: TypeError: Requested keys of a value that is not an object.
+05-03 21:17:56.649 22689 22837 E ReactNativeJS: 
+05-03 21:17:56.649 22689 22837 E ReactNativeJS: This error is located at:
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:17:56.649 22689 22837 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:18:23.978 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:18:23.980 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:18:23.980 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:18:23.980 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:18:23.986 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:18:23.989 22689 22907 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:18:24.066 22689 22907 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:18:24.072 22689 22893 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:18:24.073 22689 22907 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:18:24.079 22689 22907 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:18:24.079 22689 22907 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:18:24.079 22689 22910 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:18:24.079 22689 22910 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:18:24.080 22689 22910 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:18:24.734 22689 22909 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":31}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:18:35.410 22689 22909 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:18:35.410 22689 22909 E ReactNativeJS: 
+05-03 21:18:35.410 22689 22909 E ReactNativeJS: This error is located at:
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:18:35.410 22689 22909 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:18:35.427 22689 22909 E ReactNativeJS: 
+05-03 21:18:35.427 22689 22909 E ReactNativeJS: This error is located at:
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:18:35.427 22689 22909 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:18:37.372 22689 22909 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:18:38.135 22689 22689 D ReactNative: ReactInstanceManager.detachViewFromInstance()
+05-03 21:18:38.840 22689 22689 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:18:38.841 22689 22909 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":41}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:18:43.355 22689 22909 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'ITEM.getValueById(id)')
+05-03 21:18:43.355 22689 22909 E ReactNativeJS: 
+05-03 21:18:43.355 22689 22909 E ReactNativeJS: This error is located at:
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:18:43.355 22689 22909 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'ITEM.getValueById(id)')
+05-03 21:18:43.363 22689 22909 E ReactNativeJS: 
+05-03 21:18:43.363 22689 22909 E ReactNativeJS: This error is located at:
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Shop (at SceneView.js:17)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:18:43.363 22689 22909 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:19:33.373 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:19:33.374 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:19:33.374 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:19:33.374 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:19:33.378 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:19:33.382 22689 23030 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:19:33.452 22689 23014 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:19:33.457 22689 23030 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:19:33.458 22689 23030 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:19:33.464 22689 23030 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:19:33.464 22689 23030 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:19:33.464 22689 23032 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:19:33.464 22689 23032 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:19:33.465 22689 23032 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:19:34.122 22689 23031 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":51}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:20:54.818 22689 23031 E ReactNativeJS: undefined is not a function (evaluating '_this3.notARealFunction()')
+05-03 21:20:56.047 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:20:56.047 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:20:56.047 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:20:56.047 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:20:56.049 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:20:56.050 22689 23203 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:20:56.133 22689 23203 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:20:56.144 22689 23203 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:20:56.146 22689 23129 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:20:56.158 22689 23203 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:20:56.158 22689 23203 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:20:56.159 22689 23209 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:20:56.159 22689 23209 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:20:56.159 22689 23209 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:20:56.829 22689 23208 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":61}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:21:17.342 22689 23208 I ReactNativeJS: 'uu', { '7': { amount: 1 }, undefined: { amount: 0 } }
+05-03 21:21:17.344 22689 23208 I ReactNativeJS: ' hey', '7'
+05-03 21:21:17.349 22689 23208 I ReactNativeJS: ' hey', 'undefined'
+05-03 21:21:17.369 22689 23208 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'ITEM[id].name')
+05-03 21:21:17.369 22689 23208 E ReactNativeJS: 
+05-03 21:21:17.369 22689 23208 E ReactNativeJS: This error is located at:
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Bank (at SceneView.js:17)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:21:17.369 22689 23208 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS: TypeError: undefined is not an object (evaluating 'ITEM[id].name')
+05-03 21:21:17.397 22689 23208 E ReactNativeJS: 
+05-03 21:21:17.397 22689 23208 E ReactNativeJS: This error is located at:
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Bank (at SceneView.js:17)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:21:17.397 22689 23208 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:22:31.248 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:22:31.250 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:22:31.250 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:22:31.250 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:22:31.254 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:22:31.257 22689 23352 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:22:31.338 22689 23344 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:22:31.349 22689 23352 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:22:31.351 22689 23352 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:22:31.357 22689 23352 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:22:31.357 22689 23352 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:22:31.358 22689 23356 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:22:31.358 22689 23356 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:22:31.358 22689 23356 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:22:32.017 22689 23355 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":71}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:23:43.002 22689 23355 E ReactNativeJS: undefined is not a function (evaluating '_this3.notARealFunction()')
+05-03 21:23:44.147 22689 22689 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:23:44.147 22689 22689 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:23:44.147 22689 22689 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:23:44.147 22689 22689 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:23:44.150 22689 22689 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:23:44.151 22689 23498 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:23:44.214 22689 23441 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:23:44.221 22689 23498 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:23:44.222 22689 23498 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:23:44.230 22689 23498 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:23:44.230 22689 23498 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:23:44.230 22689 23501 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:23:44.230 22689 23501 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:23:44.231 22689 23501 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:23:44.895 22689 23500 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":81}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:24:18.091 22689 23500 I ReactNativeJS: 'uu', { '1': { amount: 7 }, '7': { amount: 1 } }
+05-03 21:24:18.094 22689 23500 I ReactNativeJS: ' hey', '1'
+05-03 21:24:18.100 22689 23500 I ReactNativeJS: ' hey', '7'
+05-03 21:25:41.587 22689 23500 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:25:41.587 22689 23500 E ReactNativeJS: 
+05-03 21:25:41.587 22689 23500 E ReactNativeJS: This error is located at:
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:25:41.587 22689 23500 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:25:41.608 22689 23500 E ReactNativeJS: 
+05-03 21:25:41.608 22689 23500 E ReactNativeJS: This error is located at:
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:25:41.608 22689 23500 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:25:42.576 22689 23500 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:28:29.880 22689 22689 D ReactNative: ReactInstanceManager.detachViewFromInstance()
+05-03 21:28:32.647 25465 25465 D ReactNative: ReactInstanceManager.ctor()
+05-03 21:28:32.703 25465 25465 D ReactNative: ReactInstanceManager.createReactContextInBackground()
+05-03 21:28:32.703 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackgroundInner()
+05-03 21:28:32.706 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:28:32.707 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:28:32.707 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:28:32.750 25465 25486 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:28:32.871 25465 25486 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:28:32.873 25465 25486 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:28:32.882 25465 25486 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:28:32.882 25465 25486 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:28:32.884 25465 25494 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:28:32.884 25465 25494 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:28:32.886 25465 25494 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:28:33.564 25465 25493 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":1}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:30:32.856 25465 25493 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:30:32.856 25465 25493 E ReactNativeJS: 
+05-03 21:30:32.856 25465 25493 E ReactNativeJS: This error is located at:
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:30:32.856 25465 25493 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS: TypeError: undefined is not a function (evaluating 'this.state.skills.map')
+05-03 21:30:32.888 25465 25493 E ReactNativeJS: 
+05-03 21:30:32.888 25465 25493 E ReactNativeJS: This error is located at:
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:30:32.888 25465 25493 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:31:28.554 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:31:28.555 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:31:28.555 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:31:28.555 25465 25465 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:31:28.559 25465 25465 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:31:28.562 25465 25969 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:31:28.640 25465 25935 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:31:28.654 25465 25969 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:31:28.656 25465 25969 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:31:28.662 25465 25969 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:31:28.662 25465 25969 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:31:28.663 25465 25972 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:31:28.663 25465 25972 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:31:28.664 25465 25972 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:31:29.328 25465 25971 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":11}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:31:36.251 25465 25971 E ReactNativeJS: ReferenceError: Can't find variable: Obect
+05-03 21:31:36.251 25465 25971 E ReactNativeJS: 
+05-03 21:31:36.251 25465 25971 E ReactNativeJS: This error is located at:
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:31:36.251 25465 25971 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS: ReferenceError: Can't find variable: Obect
+05-03 21:31:36.276 25465 25971 E ReactNativeJS: 
+05-03 21:31:36.276 25465 25971 E ReactNativeJS: This error is located at:
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:31:36.276 25465 25971 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:31:52.200 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:31:52.201 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:31:52.201 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:31:52.201 25465 25465 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:31:52.204 25465 25465 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:31:52.207 25465 26010 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:31:52.275 25465 25936 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:31:52.285 25465 26010 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:31:52.288 25465 26010 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:31:52.295 25465 26010 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:31:52.295 25465 26010 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:31:52.295 25465 26012 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:31:52.296 25465 26012 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:31:52.296 25465 26012 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:31:52.941 25465 26011 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":21}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:32:46.155 25465 26011 E ReactNativeJS: ReferenceError: Can't find variable: SKILL
+05-03 21:32:46.155 25465 26011 E ReactNativeJS: 
+05-03 21:32:46.155 25465 26011 E ReactNativeJS: This error is located at:
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:32:46.155 25465 26011 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS: ReferenceError: Can't find variable: SKILL
+05-03 21:32:46.221 25465 26011 E ReactNativeJS: 
+05-03 21:32:46.221 25465 26011 E ReactNativeJS: This error is located at:
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:32:46.221 25465 26011 E ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS: Warning: Can't call setState (or forceUpdate) on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Skills (at SceneView.js:17)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in SceneView (at CardStack.js:466)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at createAnimatedComponent.js:154)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in AnimatedComponent (at Card.js:12)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Card (at PointerEventsContainer.js:39)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Container (at CardStack.js:498)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at CardStack.js:414)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at CardStack.js:413)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in CardStack (at CardStackTransitioner.js:67)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at Transitioner.js:142)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Transitioner (at CardStackTransitioner.js:19)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in CardStackTransitioner (at StackNavigator.js:41)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Unknown (at createNavigator.js:13)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in Navigator (at createNavigationContainer.js:226)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in NavigationContainer (at renderApplication.js:33)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at AppContainer.js:102)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in RCTView (at View.js:60)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in View (at AppContainer.js:122)
+05-03 21:32:47.544 25465 26011 W ReactNativeJS:     in AppContainer (at renderApplication.js:32)
+05-03 21:32:48.226 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:32:48.226 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:32:48.226 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:32:48.226 25465 25465 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:32:48.228 25465 25465 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:32:48.229 25465 26223 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:32:48.303 25465 26223 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:32:48.305 25465 26179 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:32:48.307 25465 26223 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:32:48.313 25465 26223 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:32:48.313 25465 26223 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:32:48.313 25465 26226 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:32:48.313 25465 26226 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:32:48.314 25465 26226 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:32:48.974 25465 26225 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":31}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:33:07.215 25465 26225 E ReactNativeJS: undefined is not a function (evaluating '_this3.notARealFunction()')
+05-03 21:33:09.353 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:33:09.353 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:33:09.353 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:33:09.353 25465 25465 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:33:09.355 25465 25465 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:33:09.356 25465 26280 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:33:09.396 25465 26180 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:33:09.422 25465 26280 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:33:09.423 25465 26280 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:33:09.432 25465 26280 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:33:09.433 25465 26280 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:33:09.433 25465 26282 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:33:09.433 25465 26282 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:33:09.434 25465 26282 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:33:10.087 25465 26281 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":41}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:34:49.312 25465 26281 E ReactNativeJS: undefined is not a function (evaluating '_this3.notARealFunction()')
+05-03 21:34:50.498 25465 25465 D ReactNative: ReactInstanceManager.onJSBundleLoadedFromServer()
+05-03 21:34:50.498 25465 25465 D ReactNative: ReactInstanceManager.recreateReactContextInBackground()
+05-03 21:34:50.498 25465 25465 D ReactNative: ReactInstanceManager.runCreateReactContextOnNewThread()
+05-03 21:34:50.498 25465 25465 D ReactNative: ReactInstanceManager.tearDownReactContext()
+05-03 21:34:50.500 25465 25465 D ReactNative: CatalystInstanceImpl.destroy() start
+05-03 21:34:50.502 25465 26451 D ReactNative: ReactInstanceManager.createReactContext()
+05-03 21:34:50.566 25465 26451 D ReactNative: Initializing React Xplat Bridge.
+05-03 21:34:50.573 25465 26425 D ReactNative: CatalystInstanceImpl.destroy() end
+05-03 21:34:50.573 25465 26451 D ReactNative: Initializing React Xplat Bridge before initializeBridge
+05-03 21:34:50.580 25465 26451 D ReactNative: Initializing React Xplat Bridge after initializeBridge
+05-03 21:34:50.580 25465 26451 D ReactNative: CatalystInstanceImpl.runJSBundle()
+05-03 21:34:50.581 25465 26454 D ReactNative: ReactInstanceManager.setupReactContext()
+05-03 21:34:50.581 25465 26454 D ReactNative: CatalystInstanceImpl.initialize()
+05-03 21:34:50.581 25465 26454 D ReactNative: ReactInstanceManager.attachRootViewToInstance()
+05-03 21:34:51.221 25465 26453 I ReactNativeJS: Running application "AdventurerSimulator" with appParams: {"rootTag":51}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+05-03 21:35:06.268 25465 26453 I ReactNativeJS: 'uu', { '1': { amount: 2 }, '7': { amount: 1 } }
+05-03 21:35:06.270 25465 26453 I ReactNativeJS: ' hey', '1'
+05-03 21:35:06.276 25465 26453 I ReactNativeJS: ' hey', '7'
+05-03 21:35:35.536 25465 26453 I ReactNativeJS: 'uu', { '0': { amount: 32 }, '1': { amount: 2 }, '7': { amount: 1 } }
+05-03 21:35:35.536 25465 26453 I ReactNativeJS: ' hey', '0'
+05-03 21:35:35.542 25465 26453 I ReactNativeJS: ' hey', '1'
+05-03 21:35:35.546 25465 26453 I ReactNativeJS: ' hey', '7'

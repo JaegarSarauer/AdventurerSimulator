@@ -1,18 +1,20 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Image} from 'react-native';
 import {USER, User} from '../state/User'; 
+import * as ITEM from '../def/Item';
 
 export default class Bank extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bank: [],
+      bank: {},
     };
     this.bankToken = null;
   }
 
   componentWillMount() {
     this.bankToken = USER.bank.watch((bank) => {
+      console.info('uu', bank)
       this.setState({bank});
     })
   }
@@ -31,10 +33,11 @@ export default class Bank extends React.Component {
       );
     return (
       <View style={styles.container}>
-        {this.state.bank.map(item =>
-          <View key={item.id} style={styles.item}>
-            <Image source={item.icon}/>
-            <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
+        {Object.keys(this.state.bank).map(id =>
+          <View key={id} style={styles.item}>
+            {console.info(' hey', id)}
+            <Image source={ITEM.getIconById(id)}/>
+            <Text style={styles.text}>{ITEM.getNameById(id) + ": " + this.state.bank[id].amount}</Text>
           </View>
         )}
       </View>

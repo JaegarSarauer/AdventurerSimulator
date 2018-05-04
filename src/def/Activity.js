@@ -17,14 +17,14 @@ export const IDLE = {
 
 export const WOODCUTTING = {
     getProgressIncrement: (viewingPlayerID) => {
-        return .75 + USER.players.get()[viewingPlayerID].skills.get()[SKILL.Woodcutting.id].level * .25;
+        return .75 + USER.players.get()[viewingPlayerID].skills.get()[0].level * .25;
     },
     TREE: {
         name: 'Cutting tree',
         progress: 0,
         maxProgress: 8,
         reward: {
-            item: ITEM.Logs,
+            itemID: 1,
             itemAmount: 1,
             xp: 5
         }
@@ -34,7 +34,7 @@ export const WOODCUTTING = {
         progress: 0,
         maxProgress: 24,
         reward: {
-            item: ITEM.OakLogs,
+            itemID: 2,
             itemAmount: 1,
             xp: 15
         }
@@ -44,7 +44,7 @@ export const WOODCUTTING = {
         progress: 0,
         maxProgress: 56,
         reward: {
-            item: ITEM.WillowLogs,
+            itemID: 3,
             itemAmount: 1,
             xp: 35
         }
@@ -54,7 +54,7 @@ export const WOODCUTTING = {
         progress: 0,
         maxProgress: 112,
         reward: {
-            item: ITEM.MapleLogs,
+            itemID: 4,
             itemAmount: 1,
             xp: 75
         }
@@ -64,7 +64,7 @@ export const WOODCUTTING = {
         progress: 0,
         maxProgress: 356,
         reward: {
-            item: ITEM.YewLogs,
+            itemID: 5,
             itemAmount: 1,
             xp: 120
         }
@@ -74,7 +74,7 @@ export const WOODCUTTING = {
         progress: 0,
         maxProgress: 880,
         reward: {
-            item: ITEM.ArbutusLogs,
+            itemID: 6,
             itemAmount: 1,
             xp: 185
         }
@@ -84,8 +84,8 @@ export const WOODCUTTING = {
             TREE_TYPE.progress += WOODCUTTING.getProgressIncrement(playerID);
             if (TREE_TYPE.progress >= TREE_TYPE.maxProgress) {
                 TREE_TYPE.progress -= TREE_TYPE.maxProgress;
-                USER.players.value[playerID].addItem(TREE_TYPE.reward.item, TREE_TYPE.reward.itemAmount);
-                USER.players.value[playerID].addXP(SKILL.Woodcutting, TREE_TYPE.reward.xp);
+                USER.players.value[playerID].addItem(TREE_TYPE.reward.itemID, TREE_TYPE.reward.itemAmount);
+                USER.players.value[playerID].addXP(0, TREE_TYPE.reward.xp);
             }
         };
         TREE_TYPE.timer = setInterval(update, TICK_TIME);

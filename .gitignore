@@ -112,3 +112,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# keystore
+keystore/

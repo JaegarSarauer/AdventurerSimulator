@@ -16,15 +16,25 @@ const XP_TABLE = [0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 18
 
 export class Player {
     constructor(name) {
+        //the player/adventurer's name
         this.name = new Subscriber(name);
+
+        //the adventurers total level
+        this.totalLevel = new Subscriber(0);
+
         //current action that this player is doing. Activities manage themselves.
         this.activity = new Subscriber(Activities.IDLE.action(Activities.IDLE.IDLE));
-        this.items = new Subscriber([]);
-        this.skills = new Subscriber([{
-            name: 'Woodcutting',
-            xp: 0,
-            level: 1,
-        }]);
+
+        //the adventurers items, stored as {id: {amt}, id: {amt}}
+        this.items = new Subscriber({});
+
+        //the adventurers skills and xp as {id: {xp, lvl}, id: {xp, lvl}}
+        this.skills = new Subscriber({
+            '0': { //woodcutting
+                xp: 0,
+                level: 1,
+            }
+        });
     }
 
     /*
@@ -60,17 +70,29 @@ export class Player {
         this.skills = new Subscriber(results.skills);
         this.name = new Subscriber(results.name);
         this.activity = new Subscriber(results.activity);
-        //update definitions here maybe?
+        this.updateTotalLevel();
     }
 
-    addXP(skill, xp) {
-        this.skills.value[skill.id].xp += xp;
-        this.skills.value[skill.id].level = this.calcLevel(this.skills.value[skill.id].level, this.skills.value[skill.id].xp);
+    addXP(id, xp) {
+        this.skills.value[id].xp += xp;
+        let level = this.calcLevel(this.skills.value[id].level, this.skills.value[id].xp);
+        if (this.skills.value[id].level != level) {
+            this.skills.value[id].level = level; 
+            this.updateTotalLevel();
+        }
         this.skills.trigger();
     }
 
-    hasLevel(skill, level) {
-        return this.skills.value[skill.id].level >= level;
+    updateTotalLevel() {
+        let total = 0;
+        for (let i = 0; i < Object.keys(this.skills.value).length; i++) {
+            total += this.skills.value[i].level;
+        }
+        this.totalLevel.set(total);
+    }
+
+    hasLevel(id, level) {
+        return this.skills.value[id].level >= level;
     }
 
     calcLevel(curLevel, xp) {
@@ -86,49 +108,44 @@ export class Player {
         return 1;
     }
 
-    addItem(item, amount = 1) {
-        for (let i = 0; i < this.items.value.length; i++) {
-            if (this.items.value[i].id === item.id) {
-                this.items.value[i].amount += amount;
-                this.items.trigger();
-                return true;
-            }
+    addItem(id, amount = 1) {
+        let item = this.items.value[id];
+        if (item != null) {
+            this.items.value[id].amount += amount;
+        } else {
+            this.items.value[id] = {amount};
         }
-        let add = JSON.parse(JSON.stringify(item));
-        add.amount = amount;
-        this.items.value.push(add);
         this.items.trigger();
         return true;
     }
 
-    hasItem(item, amount = 1) {
-        for (let i = 0; i < this.items.value.length; i++) {
-            if (this.items.value[i].id === item.id) {
-                return this.items.value[i].amount < amount;
-            }
+    hasItem(id, amount = 1) {
+        if (this.items.value[id] != null) {
+            return this.items.value[id].amount >= amount;
         }
         return false;
     }
 
-    getItemAmount(item) {
-        for (let i = 0; i < this.items.value.length; i++) {
-            if (this.items.value[i].id === item.id) {
-                return this.items.value[i].amount;
-            }
+    getItemAmount(id) {
+        if (this.items.value[id] != null) {
+            return this.items.value[id].amount;
         }
         return 0;
     }
 
-    removeItem(item, amount = 1) {
-        for (let i = 0; i < this.items.value.length; i++) {
-            if (this.items.value[i].id === item.id) {
-                let removed = amount + Math.min(0, (this.items.value[i].amount - amount));
-                this.items.value[i].amount -= removed;
-                if (this.items.value[i].amount <= 0)
-                    this.items.value.splice(i, 1);
-                this.items.trigger();
-                return removed;
-            }
+    /*
+    Summary:                Removes items from the adventurer's inventory.
+
+    Return:     [number]    Returns the amount of items removed.
+    */
+    removeItem(id, amount = 1) {
+        if (this.items.value[id] != null) {
+            let removed = amount + Math.min(0, (this.items.value[id].amount - amount));
+            this.items.value[id].amount -= removed;
+            if (this.items.value[id].amount <= 0)
+                delete this.items.value[id];
+            this.items.trigger();
+            return removed;
         }
         return 0;
     }
@@ -136,16 +153,16 @@ export class Player {
     /*
     Puts item in user bank
     */
-    depositItem(item, amount = 1) {
-        let removed = this.removeItem(item, amount);
-        USER.addBankItem(item, removed);
+    depositItem(itemID, amount = 1) {
+        let removed = this.removeItem(itemID, amount);
+        USER.addBankItem(itemID, removed);
     }
 
     /*
     Takes item from user bank.
     */
-    withdrawItem(item, amount = 1) {
-        let removed = USER.removeBankItem(item, amount);
-        this.addItem(item, removed);
+    withdrawItem(itemID, amount = 1) {
+        let removed = USER.removeBankItem(itemID, amount);
+        this.addItem(itemID, removed);
     }
 }

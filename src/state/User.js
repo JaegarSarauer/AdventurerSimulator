@@ -19,14 +19,16 @@ export class User {
         this.players = new Subscriber([]);
 
         //All players share this bank, you have access to this for buying things that require resources.
-        this.bank = new Subscriber([]);
+        //stored as {id: {amt}, id: {amt}}
+        this.bank = new Subscriber({});
 
         //The id of the player were looking through in the UI.
         this.viewingPlayer = new Subscriber(-1);
 
-        this.addBankItem(ITEM.BronzeAxe, 1);
+        this.addBankItem(7, 1);
 
-        this.loadData();
+        //this.loadData();
+            this.saveData();
         this.autosaveLoop = setInterval(() => {
             this.saveData();
         }, 30000);
@@ -98,51 +100,41 @@ export class User {
         this.players.trigger();
     }
 
-    addBankItem(item, amount = 1) {
-        console.info(item);
-        for (let i = 0; i < this.bank.value.length; i++) {
-            if (this.bank.value[i].id === item.id) {
-                this.bank.value[i].amount += amount;
-                this.bank.trigger();
-                return true;
-            }
+    addBankItem(id, amount = 1) {
+        let item = this.bank.value[id];
+        if (item != null) {
+            this.bank.value[id].amount += amount;
+        } else {
+            this.bank.value[id] = {amount};
         }
-        let add = JSON.parse(JSON.stringify(item));
-        add.amount = amount;
-        this.bank.value.push(add);
         this.bank.trigger();
         return true;
     }
 
     hasBankItem(item, amount = 1) {
-        for (let i = 0; i < this.bank.value.length; i++) {
-            if (this.bank.value[i].id === item.id) {
-                return this.bank.value[i].amount < amount;
-            }
+        if (this.bank.value[id] != null) {
+            return this.bank.value[id].amount >= amount;
         }
         return false;
     }
 
     getBankItemAmount(item) {
-        for (let i = 0; i < this.bank.value.length; i++) {
-            if (this.bank.value[i].id === item.id) {
-                return this.bank.value[i].amount;
-            }
+        if (this.bank.value[id] != null) {
+            return this.bank.value[id].amount;
         }
         return 0;
     }
 
     removeBankItem(item, amount = 1) {
-        for (let i = 0; i < this.bank.value.length; i++) {
-            if (this.bank.value[i].id === item.id) {
-                let removed = amount + Math.min(0, (this.bank.value[i].amount - amount));
-                this.bank.value[i].amount -= amount;
-                if (this.bank.value[i].amount <= 0)
-                    this.bank.value.splice(i, 1);
-                this.bank.trigger();
-                return removed;
-            }
+        if (this.bank.value[id] != null) {
+            let removed = amount + Math.min(0, (this.bank.value[id].amount - amount));
+            this.bank.value[id].amount -= removed;
+            if (this.bank.value[id].amount <= 0)
+                delete this.bank.value[id];
+            this.bank.trigger();
+            return removed;
         }
+        return 0;
     }
 }
 

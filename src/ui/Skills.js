@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, FlatList} from 'react-native';
 import {User, USER} from '../state/User'; 
+import * as SKILL from '../def/Skill';
 
 export default class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      skills: [],
+      skills: {},
     };
     this.skillsToken = null;
   }
@@ -24,12 +25,12 @@ export default class Skills extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {this.state.skills.map(skill => 
+        {Object.keys(this.state.skills).map(id => 
           <Text 
-            key={skill.name}
+            key={id}
             style={styles.item}
           >
-            {skill.name + ": " + skill.level + ' (' + skill.xp + 'xp)'}
+            {SKILL.getNameFromId(id) + ": " + this.state.skills[id].level + ' (' + this.state.skills[id].xp + 'xp)'}
           </Text>
         )}
       </View>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Modal, Image} from 'react-native';
 import {USER, User} from '../state/User'; 
-import { ITEM } from '../def/Item';
+import * as ITEM from '../def/Item';
 
 export default class Shop extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class Shop extends React.Component {
     this.state = {
       showSellModal: false,
       modalItem: null,
-      items: [],
+      items: {},
     };
     this.itemsToken = null;
   }
@@ -25,7 +25,7 @@ export default class Shop extends React.Component {
   }
 
   sellItem(item, amount) {
-    amount = Math.min(amount, USER.getCurrentPlayer().getItemAmount(item));
+    amount = Math.min(amount, USER.getCurrentPlayer().getItemAmount(item.id));
     if (amount === 0) {
       this.setState({
         showSellModal: false,
@@ -33,8 +33,8 @@ export default class Shop extends React.Component {
       });
       return;
     }
-    USER.getCurrentPlayer().removeItem(item, amount);
-    USER.getCurrentPlayer().addItem(ITEM.Coins, amount * item.value);
+    USER.getCurrentPlayer().removeItem(item.id, amount);
+    USER.getCurrentPlayer().addItem(0, amount * item.value);
     this.setState({
       showSellModal: false,
       modalItem: null,
@@ -42,19 +42,21 @@ export default class Shop extends React.Component {
   }
 
   render() {
-    const items = this.state.items.filter(item => {return item.id !== ITEM.Coins.id});
+    const items = Object.keys(this.state.items).filter(id => {
+      return id != 0;
+    });
     if (items.length === 0)
       return (<Text style={styles.centerText}>No items to sell!</Text>);
     return (
       <View style={styles.container}>
-        {items.map(item =>
+        {(items).map(id =>
           <View 
-            onTouchEnd={() => {this.setState({showSellModal: true, modalItem: item})}} 
-            key={item.id} 
+            onTouchEnd={() => {this.setState({showSellModal: true, modalItem: ITEM.getItemById(id)})}} 
+            key={id} 
             style={styles.item}
           >
-            <Image source={item.icon}/>
-            <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
+            <Image source={ITEM.getIconById(id)}/>
+            <Text style={styles.text}>{ITEM.getNameById(id) + ": " + this.state.items[id].amount}</Text>
           </View>
         )}
         <Modal
@@ -77,7 +79,10 @@ export default class Shop extends React.Component {
                     <Button style={modal.button} title='Sell 50' onPress={() => {this.sellItem(this.state.modalItem, 50)}}/>
                 </View>
                 <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Sell All' onPress={() => {this.sellItem(this.state.modalItem, this.state.modalItem.amount)}}/>
+                    <Button style={modal.button} title='Sell All Except 1' onPress={() => {this.sellItem(this.state.modalItem, this.state.items[this.state.modalItem.id].amount - 1)}}/>
+                </View>
+                <View style={modal.buttonContainer}>
+                    <Button style={modal.button} title='Sell All' onPress={() => {this.sellItem(this.state.modalItem, this.state.items[this.state.modalItem.id].amount)}}/>
                 </View>
             </View>
         </Modal>

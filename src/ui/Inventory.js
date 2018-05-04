@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Image, Modal} from 'react-native';
 import {User, USER} from '../state/User'; 
+import * as ITEM from '../def/Item';
 
 export default class Inventory extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class Inventory extends React.Component {
     this.state = {
       showDeopsitModal: false,
       modalItem: null,
-      items: [],
+      items: {},
     };
     this.itemsToken = null;
   }
@@ -24,9 +25,7 @@ export default class Inventory extends React.Component {
   }
 
   depositItem(item, amount) {
-    let removed = USER.getCurrentPlayer().removeItem(item,amount);
-    USER.addBankItem(item, removed);
-    //USER.getCurrentPlayer().depositItem(item, amount);
+    USER.getCurrentPlayer().depositItem(item.id, amount);
     this.setState({
       showDeopsitModal: false,
       modalItem: null,
@@ -38,17 +37,17 @@ export default class Inventory extends React.Component {
       return (<Text style={styles.centerText}>You have no items!</Text>);
     return (
       <View style={styles.container}>
-        {this.state.items.map(item =>
+        {Object.keys(this.state.items).map(id =>
           <View 
-            key={item.id} 
+            key={id} 
             style={styles.item}
             onTouchEnd={() => {this.setState({
               showDeopsitModal: true, 
-              modalItem: item
+              modalItem: ITEM.getItemById(id),
             })}} 
           >
-            <Image source={item.icon}/>
-            <Text style={styles.text}>{item.name + ": " + item.amount}</Text>
+            <Image source={ITEM.getIconById(id)}/>
+            <Text style={styles.text}>{ITEM.getNameById(id) + ": " + this.state.items[id].amount}</Text>
           </View>
         )}
         <Modal
@@ -71,10 +70,10 @@ export default class Inventory extends React.Component {
                     <Button style={modal.button} title='Deposit 50' onPress={() => {this.depositItem(this.state.modalItem, 50)}}/>
                 </View>
                 <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Deposit All' onPress={() => {this.depositItem(this.state.modalItem, this.state.modalItem.amount)}}/>
+                    <Button style={modal.button} title='Deposit All Except 1' onPress={() => {this.depositItem(this.state.modalItem, this.state.items[this.state.modalItem.id].amount - 1)}}/>
                 </View>
                 <View style={modal.buttonContainer}>
-                    <Button style={modal.button} title='Deposit All Except 1' onPress={() => {this.depositItem(this.state.modalItem, this.state.modalItem.amount - 1)}}/>
+                    <Button style={modal.button} title='Deposit All' onPress={() => {this.depositItem(this.state.modalItem, this.state.items[this.state.modalItem.id].amount)}}/>
                 </View>
             </View>
         </Modal>

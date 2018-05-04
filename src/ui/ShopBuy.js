@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet, Modal, Image, ToastAndroid} from 'react-native';
 import {USER, User} from '../state/User'; 
-import { ITEM } from '../def/Item';
+import * as ITEM from '../def/Item';
 
 export const SHOP_BUY_MULITPLIER = 3;
 
@@ -11,42 +11,61 @@ export default class Shop extends React.Component {
     this.state = {
       showBuyModal: false,
       modalItem: null,
-      shopStock: [
-        ITEM.Logs, ITEM.BronzeAxe, ITEM.IronAxe, ITEM.SteelAxe,
-      ],
+      shopStock: {
+        1: {
+          amount: 10
+        }, 
+        7: {
+          amount: 10
+        }, 
+        8: {
+          amount: 10
+        }, 
+        9: {
+          amount: 10
+        }
+      }, //id and amount
     };
   }
 
   buyItem(item, amount) {
-    let cost = item.price * SHOP_BUY_MULITPLIER * amount;
-    let maxAmount = Math.min(amount, Math.floor(USER.getCurrentPlayer().getItemAmount(ITEM.Coins) / cost)); //how many you want vs can afford.
-    cost = item.price * SHOP_BUY_MULITPLIER * maxAmount;
+    let cost = item.value * SHOP_BUY_MULITPLIER;
+    let maxAmount = Math.min(amount, Math.floor(USER.getCurrentPlayer().getItemAmount(0) / cost)); //how many you want vs can afford.
+    let totalCost = item.value * SHOP_BUY_MULITPLIER * maxAmount;
     if (maxAmount <= 0) {
       ToastAndroid.show('Not enough coins!', ToastAndroid.SHORT);
-      this.setState({showBuyModal: false});
+      this.setState({
+        showBuyModal: false,
+        modalItem: null
+      });
       return;
-    }
-    USER.getCurrentPlayer().removeItem(ITEM.Coins, cost);
-    USER.getCurrentPlayer().addItem(item, maxAmount);
+    } 
+    USER.getCurrentPlayer().removeItem(0, totalCost);
+    USER.getCurrentPlayer().addItem(item.id, maxAmount);
     this.setState({
       showBuyModal: false,
+      modalItem: null,
     });
   }
 
   render() {
-    const items = this.state.shopStock;
-    if (items.length === 0)
+    if (Object.keys(this.state.shopStock).length === 0)
       return (<Text style={styles.centerText}>No items for sale!</Text>);
     return (
       <View style={styles.container}>
-        {items.map(item =>
+        {Object.keys(this.state.shopStock).map(id =>
           <View 
-            onTouchEnd={() => {this.setState({showBuyModal: true, modalItem: item})}} 
-            key={item.id} 
+            onTouchEnd={() => {
+              this.setState({
+                showBuyModal: true, 
+                modalItem: ITEM.getItemById(id)
+              })
+            }} 
+            key={id} 
             style={styles.item}
           >
-            <Image source={item.icon}/>
-            <Text style={styles.text}>{item.name + ": " + item.value * SHOP_BUY_MULITPLIER + " coins"}</Text>
+            <Image source={ITEM.getIconById(id)}/>
+            <Text style={styles.text}>{ITEM.getNameById(id) + ": " + ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
           </View>
         )}
         <Modal

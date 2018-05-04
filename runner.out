@@ -1,0 +1,59 @@
+Scanning folders for symlinks in /Users/jaegarsarauer/Documents/DATA/Incremental-React/LifeSimulator/AdventurerSimulator/node_modules (29ms)
+JS server already running.
+Building and installing the app on the device (cd android && ./gradlew installDebug)...
+Incremental java compilation is an incubating feature.
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild UP-TO-DATE
+:app:checkDebugManifest
+:app:preReleaseBuild UP-TO-DATE
+:app:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:app:prepareComAndroidSupportSupportV42301Library UP-TO-DATE
+:app:prepareComFacebookFbuiTextlayoutbuilderTextlayoutbuilder100Library UP-TO-DATE
+:app:prepareComFacebookFrescoDrawee130Library UP-TO-DATE
+:app:prepareComFacebookFrescoFbcore130Library UP-TO-DATE
+:app:prepareComFacebookFrescoFresco130Library UP-TO-DATE
+:app:prepareComFacebookFrescoImagepipeline130Library UP-TO-DATE
+:app:prepareComFacebookFrescoImagepipelineBase130Library UP-TO-DATE
+:app:prepareComFacebookFrescoImagepipelineOkhttp3130Library UP-TO-DATE
+:app:prepareComFacebookReactReactNative0553Library UP-TO-DATE
+:app:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:app:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:app:prepareDebugDependencies
+:app:compileDebugAidl UP-TO-DATE
+:app:compileDebugRenderscript UP-TO-DATE
+:app:generateDebugBuildConfig UP-TO-DATE
+:app:mergeDebugShaders UP-TO-DATE
+:app:compileDebugShaders UP-TO-DATE
+:app:generateDebugAssets UP-TO-DATE
+:app:mergeDebugAssets UP-TO-DATE
+:app:generateDebugResValues UP-TO-DATE
+:app:generateDebugResources UP-TO-DATE
+:app:mergeDebugResources UP-TO-DATE
+:app:bundleDebugJsAndAssets SKIPPED
+:app:processDebugManifest UP-TO-DATE
+:app:processDebugResources UP-TO-DATE
+:app:generateDebugSources UP-TO-DATE
+:app:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:app:compileDebugJavaWithJavac UP-TO-DATE
+:app:compileDebugNdk UP-TO-DATE
+:app:compileDebugSources UP-TO-DATE
+:app:transformClassesWithDexForDebug UP-TO-DATE
+:app:mergeDebugJniLibFolders UP-TO-DATE
+:app:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:app:processDebugJavaRes UP-TO-DATE
+:app:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:app:validateSigningDebug
+:app:packageDebug UP-TO-DATE
+:app:assembleDebug UP-TO-DATE
+:app:installDebug
+Installing APK 'app-debug.apk' on 'LG-H873 - 7.0' for app:debug
+Installed on 1 device.
+
+BUILD SUCCESSFUL
+
+Total time: 19.166 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.14.1/userguide/gradle_daemon.html
+Running adb -s LGH873430007f reverse tcp:8081 tcp:8081
+Starting the app on LGH873430007f (adb -s LGH873430007f shell am start -n com.adventurersimulator/com.adventurersimulator.MainActivity)...
+Starting: Intent { cmp=com.adventurersimulator/.MainActivity }

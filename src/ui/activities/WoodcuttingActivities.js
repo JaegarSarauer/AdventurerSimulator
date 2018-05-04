@@ -26,7 +26,7 @@ export default class WoodcuttingActivities extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 1) && 
+        {USER.getCurrentPlayer().hasLevel(0, 1) && 
           <View style={styles.activity}>
           <Activity 
             title='Tree'
@@ -36,7 +36,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 15) && 
+        {USER.getCurrentPlayer().hasLevel(0, 15) && 
           <View style={styles.activity}>
           <Activity 
             title='Oak Tree'
@@ -46,7 +46,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 30) && 
+        {USER.getCurrentPlayer().hasLevel(0, 30) && 
           <View style={styles.activity}>
           <Activity 
             title='Willow Tree'
@@ -56,7 +56,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 45) && 
+        {USER.getCurrentPlayer().hasLevel(0, 45) && 
           <View style={styles.activity}>
           <Activity 
             title='Maple Tree'
@@ -66,7 +66,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 60) && 
+        {USER.getCurrentPlayer().hasLevel(0, 60) && 
           <View style={styles.activity}>
           <Activity 
             title='Yew Tree'
@@ -76,7 +76,7 @@ export default class WoodcuttingActivities extends React.Component {
           />
           </View>
         }
-        {USER.getCurrentPlayer().hasLevel(SKILL.Woodcutting, 80) && 
+        {USER.getCurrentPlayer().hasLevel(0, 80) && 
           <View style={styles.activity}>
           <Activity 
             title='Arbutus Tree'

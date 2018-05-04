@@ -30,7 +30,7 @@ export default class Skills extends React.Component {
             key={id}
             style={styles.item}
           >
-            {SKILL.getNameFromId(id) + ": " + this.state.skills[id].level + ' (' + this.state.skills[id].xp + 'xp)'}
+            {SKILL.getNameById(id) + ": " + this.state.skills[id].level + ' (' + this.state.skills[id].xp + 'xp)'}
           </Text>
         )}
       </View>

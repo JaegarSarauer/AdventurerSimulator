@@ -14,7 +14,9 @@ import { StackNavigator } from 'react-navigation';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 export default App = StackNavigator({
-    Home: { screen: Home },
+    Home: { 
+        screen: Home
+    },
     Player: { screen: Player },
     Bank: { screen: Bank },
     Inventory: { screen: Inventory },
@@ -24,4 +26,11 @@ export default App = StackNavigator({
     WoodcuttingActivities: { screen: WoodcuttingActivities },
     ShopBuy: { screen: ShopBuy },
     ShopSell: { screen: ShopSell },
-}, { headerMode: 'none' });
+}, { 
+    headerMode: 'none', 
+    transitionConfig: () => ({
+        transitionSpec: {
+        duration: 1,
+        }
+    }),
+});

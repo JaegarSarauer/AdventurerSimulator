@@ -35,6 +35,8 @@ export class Player {
                 level: 1,
             }
         });
+        
+        this.updateTotalLevel();
     }
 
     /*
@@ -98,7 +100,7 @@ export class Player {
     calcLevel(curLevel, xp) {
         for (let i = curLevel; i < XP_TABLE.length; i++) {
             if (xp < XP_TABLE[i]) {
-                if (xp > XP_TABLE[i - 1]) {
+                if (xp >= XP_TABLE[i - 1]) {
                     return i;
                 } else {
                     i -= 2;

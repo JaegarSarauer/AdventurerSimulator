@@ -27,8 +27,7 @@ export class User {
 
         this.addBankItem(7, 1);
 
-        //this.loadData();
-            this.saveData();
+        this.loadData();
         this.autosaveLoop = setInterval(() => {
             this.saveData();
         }, 30000);

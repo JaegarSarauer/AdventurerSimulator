@@ -87,6 +87,7 @@ export const WOODCUTTING = {
                 USER.players.value[playerID].addItem(TREE_TYPE.reward.itemID, TREE_TYPE.reward.itemAmount);
                 USER.players.value[playerID].addXP(0, TREE_TYPE.reward.xp);
             }
+            USER.players.value[playerID].activity.trigger();
         };
         TREE_TYPE.timer = setInterval(update, TICK_TIME);
         return TREE_TYPE;

@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet} from 'react-native';
+import { Button, View, Text, StyleSheet,} from 'react-native';
 import {USER, User} from '../state/User';
+import ProgressBar from './ProgressBar';
+import { TICK_TIME } from '../game/GameState';
 
 export default class PlayerHeader extends React.Component {
   constructor(props) {
@@ -8,9 +10,12 @@ export default class PlayerHeader extends React.Component {
     this.state = {
       name: '',
       activity: null,
+      items: {},
+      skills: {},
     };
     this.nameToken = null;
     this.activityToken = null;
+    this.itemsToken = null;
   }
 
   componentWillMount() {
@@ -20,18 +25,28 @@ export default class PlayerHeader extends React.Component {
     this.activityToken = USER.getCurrentPlayer().activity.watch((activity) => {
       this.setState({activity});
     });
+    this.itemsToken = USER.getCurrentPlayer().items.watch((items) => {
+      this.setState({items});
+    });
   }
 
   componentWillUnmount() {
     this.nameToken.stop();
     this.activityToken.stop();
+    this.itemsToken.stop();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.name + ' (Level 3)'}</Text>
-        <Text>{'Current Action: ' + this.state.activity.name}</Text>
+        <Text>{this.state.name + ' : Total Level ' + USER.getCurrentPlayer().totalLevel.get()}</Text>
+        {this.state.activity != null &&
+          <Text>{'Current Action: ' + this.state.activity.name}</Text>
+        }
+        {this.state.activity != null &&
+          <ProgressBar progress={this.state.activity.progress / this.state.activity.maxProgress} />
+        }
+        <Text>{'Coins: ' + USER.getCurrentPlayer().getItemAmount(0)}</Text>
       </View>
     );
   }

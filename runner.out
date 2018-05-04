@@ -1,4 +1,4 @@
-Scanning folders for symlinks in /Users/jaegarsarauer/Documents/DATA/Incremental-React/LifeSimulator/AdventurerSimulator/node_modules (29ms)
+Scanning folders for symlinks in /Users/jaegarsarauer/Documents/DATA/Incremental-React/LifeSimulator/AdventurerSimulator/node_modules (20ms)
 JS server already running.
 Building and installing the app on the device (cd android && ./gradlew installDebug)...
 Incremental java compilation is an incubating feature.
@@ -51,7 +51,7 @@ Installed on 1 device.
 
 BUILD SUCCESSFUL
 
-Total time: 19.166 secs
+Total time: 16.855 secs
 
 This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.14.1/userguide/gradle_daemon.html
 Running adb -s LGH873430007f reverse tcp:8081 tcp:8081

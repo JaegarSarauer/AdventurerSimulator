@@ -7,23 +7,16 @@ export const TICK_TIME = 250;
 
 export class GameState {
     constructor() {
-        this.playerCost = 100;
     }
 
     getPlayerCost() {
-        if (USER.totalPlayers.get() === 0)
-            return 0;
-        return this.playerCost;
+        return Math.pow(USER.totalPlayers.get(), 3) * 100;
     }
 
     buyPlayer(name) {
-        if (USER.totalPlayers.get() === 0) {
-            USER.addPlayer(name);
-            return true;
-        }
-        if (USER.getBankItemAmount(0) >= this.playerCost) {
-            USER.removeBankItem(0, this.playerCost);
-            this.playerCost *= 3;
+        let cost = this.getPlayerCost();
+        if (USER.getBankItemAmount(0) >= cost) {
+            USER.removeBankItem(0, cost);
             USER.addPlayer(name);
             return true;
         }

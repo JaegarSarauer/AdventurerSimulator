@@ -66,8 +66,9 @@ export default class Shop extends React.Component {
               key={id} 
               style={styles.item}
             >
-              <Image source={ITEM.getIconById(id)}/>
-              <Text style={styles.text}>{ITEM.getNameById(id) + ": " + ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
+              <Text style={styles.amount}>{ITEM.getValueById(id) * SHOP_BUY_MULITPLIER + " coins"}</Text>
+              <Image resizeMode='contain' style={styles.icon} source={ITEM.getIconById(id)}/>
+              <Text style={styles.text}>{ITEM.getNameById(id)}</Text>
             </View>
           )}
           <Modal
@@ -100,27 +101,42 @@ export default class Shop extends React.Component {
   }
 }
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-    },
-    item: {
-      flex: 1,
-      height: 40,
-      padding: 4,
-      margin: '1%',
-      backgroundColor: '#d68807',
-      flexDirection: 'row',
-      width: '48%',
-      minWidth: '48%',
-      alignItems: 'center',
-    },
-    text: {
-      paddingLeft: 10,
-      fontSize: 18,
-    },
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: 'brown',
+  },
+  item: {
+    flex: 1,
+    margin: 8,
+    flexDirection: 'column',
+    minWidth: 100,
+    width: 100,
+    maxWidth: 100,
+    minHeight: 100,
+    height: 100,
+    maxHeight: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    margin: '10%',
+    flex: 1,
+    width: '100%',
+    height: 'auto',
+    opacity: 1,
+  },
+  amount: {
+    flex: 2,
+    fontSize: 18,
+    position: 'absolute',
+    zIndex: 100,
+    right: 2,
+    top: 2,
+    opacity: 1,
+    color: 'yellow',
+  },
     centerText: {
         width: '100%',
         height: '100%',

@@ -34,7 +34,7 @@ export const ITEM = {
         id: 2,
         name: 'Oak Logs',
         value: 6,
-        icon: IMAGE.ITEMS.Logs,
+        icon: IMAGE.ITEMS.OakLogs,
     },
     '3': {
         id: 3,
